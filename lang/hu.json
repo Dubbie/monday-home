@@ -1,0 +1,138 @@
+{
+    "company_name": "Monday Insurance Brokers Kft.",
+    "alert": "Az állomány-átruházás részletes tájékoztatójának megtekintése.",
+    "ui": {
+        "learn_more": "Tovább"
+    },
+    "header": {
+        "about_us": "Rólunk",
+        "services": "Szolgáltatások",
+        "appointment": "Megbízom a Monday-t",
+        "contact": "Elérhetőségek",
+        "company_insurance": "Cégbiztosítás",
+        "condominium_insurance": "Társasház Biztosítás",
+        "agricultural_insurance": "Mezőgazdasági Biztosítások"
+    },
+    "about_us": {
+        "introduction": {
+            "title": "Hátterünk",
+            "description": "A 2009-ben alakult Monday mára a magyarországi biztosításközvetítői piac stabil szereplője. A Monday tulajdonosai évtizedes tapasztalattal rendelkeznek a banki, biztosítási és ingatlanbefektetési szakterületekről."
+        },
+        "mission": {
+            "title": "Célunk",
+            "description": "A tulajdonosok célja, hogy egy olyan pénzügyi szolgáltatási rendszer kerüljön kiépítésre, amely folyamatosan tudja kiszolgálni a tulajdonosokhoz hasonló, magas színvonalú szolgáltatást elváró ügyfeleket. Társaságunk szakmai tanácsadó hálózata nem csak a lakossági igényeket, hanem a vállalati szektor magas szintű elvárásait is képes kiszolgálni."
+        },
+        "contribution": {
+            "title": "Fejlődés",
+            "description": "Hiszünk abban, hogy a hozzánk hasonló felelős pénzügyi intézmények működése segít abban, hogy a hazai biztosítási kultúra európai színvonalra fejlődjön"
+        }
+    },
+    "contract": {
+        "tos": "Általános Szerződési Feltételek (PDF)",
+        "privacy_policy": "Adatvédelmi Szabályzat",
+        "e_marketing": "E-Marketing Nyilatkozat"
+    },
+    "services": {
+        "audit": {
+            "title": "Biztosítási Audit",
+            "headline": " Meglévő biztosítottsági állapot feltárása és előzményszerződések vizsgálata",
+            "description": "Megvizsgáljuk a megbízó összes élő biztosítási kötvényét. A meglévő biztosítási szerződéseket, azok aktuális biztosítási feltételeinek figyelembevételével, ellenőrizzük a biztosítóknál. Ennek keretében",
+            "payment_status": "Megvizsgáljuk a biztosítási szerződések díjrendezettségét.",
+            "overview": "Áttekintjük a biztosítási szerződésekben lefedett kockázatokat, kizárásokat, mentesüléseket, kártérítési limiteket, önrészesedéseket, és minden egyéb lényeges információt, amelyeket a meglévő kötvények tartalmaznak."
+        },
+        "needs": {
+            "title": "Igényfelmérés",
+            "principal": "Megbízó tevékenységéhez igazodva felmérjük a telephelyek és tevékenységek kockázatait.",
+            "claims": "Felmérjük Megbízó tevékenységéhez kapcsolódó kockázatokat mind az okozható mind az elszenvedhető károk vonatkozásában.",
+            "assistance": "Segítséget nyújtunk a vagyonértékek helyes meghatározásához.",
+            "special": "Megismerjük a Megbízó speciális biztosítási, kockázatkezelési igényeit, felelősségi területeit, kockázatvállalási hajlandóságát.",
+            "tools": "A szükséges eszközök igénybevételével (személyes egyeztetések, helyszín bejárások, kérdőívek, stb.) felmérjük a Megbízó biztosítási igényeit."
+        },
+        "tender": {
+            "title": "Versenyeztetés",
+            "proposals": "Amennyiben az adott helyzet lehetővé teszi, úgy a Megbízó által elfogadott biztosítási konstrukcióra ajánlatot kérünk a biztosító társaságoktól a hazai, szükség esetén a nemzetközi biztosítási piacon, jellemzően többfordulós versenyeztetés keretében.",
+            "coverage": "Amennyiben a meglévő szerződések nem teszik lehetővé (például azért mert évközben nem lehet biztosítót váltani) a versenyeztetést, úgy a lehetőségekhez mérten a meglévő biztosítókkal tárgyalást kezdeményezünk a kialakítandó fedezet szükség szerinti módosítása és ár-érték arányának optimalizálása érdekében."
+        },
+        "legal_changes": {
+            "title": "Jogszabályi változások követése",
+            "options": "A biztosítással kapcsolatos jogszabályok naprakész ismeretével megteremtjük partnereink számára, hogy a jog szabályi lehetőségek kihasználásával, a biztosítási területen minden számukra kedvező lehetőséget kihasználjanak."
+        },
+        "premium_payment": {
+            "title": "Díjfizetés koordinálása",
+            "monitor": "A Megbízás tartama alatt folyamatosan ellenőrizzük a Megbízó szerződéseinek díjrendezettségét, és szükség esetén figyelmeztetjük a díjfizetés elmaradására.",
+            "compare": "A biztosítók által kiállított számlákat összevetjük az érvényben lévő szerződésekkel, annak érdekében, hogy a megfelelő biztosítási díj kerüljön számlázásra."
+        },
+        "daily_administration": {
+            "title": "Napi ügyintézés",
+            "description": "Munkatársaink a fentieken túl, minden biztosítással kapcsolatos ügyben segítséget nyújtanak. Ilyenek pl. nemzetközi zöldkártya kiadás, engedményezés, biztosítói igazolások beszerzése, tájékoztatás, tanácsadás biztosítási témában, bónuszátvezetés, adatváltozások bejelentése, stb."
+        },
+        "evaluation": {
+            "title": "Értékelés",
+            "real_risk": "Megbízónk tevékenységével, vagyoni értékeivel kapcsolatos kockázatok felmérése után, szakembereink meghatározzák a Megbízónk szempontjából potenciális veszélyhelyzetek és veszélyeztető események körét (a továbbiakban „valós kockázat”)",
+            "compare": "Amennyiben az adott kockázat megkívánja, úgy javaslatot teszünk e kockázatokból a cég által vállalható részesedés (önrész) mértékére, valamint az elképzelhető legnagyobb kár nagyságára (limit) vonatkozóan. A díj és a kockázatvalószínűség összehasonlítása lehetővé teszi, hogy valós kockázatok kerüljenek biztosításra, valamint a díj és kockázat arányának kialakítása a partner számára a legoptimálisabb legyen.",
+            "questionnaire": "Az adatközlők, a kockázatelemzés és Megbízó hatályos biztosítási szerződései alapján az Alkusz elkészíti az aktuális biztosítottság értékelését, különös figyelmet fordítva a fedezet nélküli kockázatokra."
+        },
+        "tracking_changes": {
+            "title": "Változások követése",
+            "data": "Megbízó által szolgáltatott adatok alapján folyamatosan figyelemmel kísérjük a tevékenységben és vagyonértékben történt változásokat, javaslatot teszünk a szükséges kiegészítésekre, újonnan felmerült kockázatok lefedésére, a biztosítási konstrukció esetleges módosításra, aktualizálására. A Megbízó kifejezett utasítása alapján mindezek alapján kezdeményezzük a biztosítási szerződések módosítását, kiterjesztését. A megfelelő biztosítottság folyamatos fenntartásához a Megbízó gyors, pontos és szakszerű adatszolgáltatása elengedhetetlen."
+        },
+        "new_options": {
+            "title": "Új konstrukciók bemutatása",
+            "monitor": "Folyamatosan figyelemmel kísérjük a biztosítási piacon megjelenő új termékeket, és amennyiben ezek a Megbízó számára kedvező lehetőségeket hordoznak magukban, részletes ismertetést készítünk a termékről."
+        },
+        "anniversary_renewal": {
+            "title": "Évfordulós megújítás",
+            "quote": "A biztosítási évfordulókat megelőző megfelelő időben, amennyiben a piacon észlelhető változások ezt szükségessé teszik, ismételten árajánlatokat kérünk a biztosító társaságoktól, jellemzően többfordulós versenyeztetés keretében, hogy Megbízónk mindig a legkedvezőbb szerződéssel rendelkezzen."
+        },
+        "claim_settlement": {
+            "title": "Kárrendezés",
+            "description": "Megbízónk részére vállaljuk a károk rendezésében való közreműködést. Ennek elengedhetetlen feltétele, hogy a Megbízónak a káresemény bekövetkezését követően a lehető legrövidebb időn belül tájékoztatnia kell bennünket a káresetről. Tekintettel arra, hogy a kárügyintézés biztosítási módozatonként – ingatlan biztosítás, ingóság biztosítás, építés-szerelés biztosítás, gépjármű biztosítás, felelősségbiztosítás, stb. – jelentősen eltérhet, ezért a vállalt feladatok is az adott kárügy kapcsán releváns feladatok ellátását jelenti.",
+            "heading": "A kárrendezési együttműködés keretében:",
+            "declaration": "Szakembereink segítségével megtesszük a szakszerű kárbejelentést, amennyiben ahhoz minden szükséges információ a rendelkezésünkre áll.",
+            "claim": "Igény esetén leellenőrizzük a Megbízó által megfogalmazott kárbejelentést.",
+            "organize": "Amennyiben szükséges, megszervezzük a kárszemlét, szükség esetén személyesen is részt veszünk a kárszemle során.",
+            "cooperation": "Részt veszünk a kárrendezés teljes folyamatában, segítséget nyújtunk a kárigény összeállításában, a kárrendezési dokumentumok megfelelőségében, a szükséges és elégséges dokumentációs csomag összegyűjtésében, a biztosítóhoz való eljuttatásában.",
+            "coordination": "Koordináljuk a kárrendezés folyamatát, szükség esetén egyeztető tárgyalásokat folytatunk az érintett biztosítótársaságokkal Megbízónk érdekeit maximálisan képviselve.",
+            "third_party": "Közreműködésünk a kárrendezési eljárásban nem terjed ki a harmadik személy károsultakkal történő kapcsolattartásra és egyeztetésre.",
+            "record": "Társaságunk vállalja a közreműködésünkkel bonyolított kárügyek nyilvántartását. "
+        },
+        "pdf_hungarian": "Eredeti letöltése (Magyar, PDF)",
+        "pdf_english": "Eredeti letöltése (Angol, PDF)"
+    },
+    "footer": {
+        "get_in_touch": "Kapcsolatfelvétel",
+        "phone": "+36 1 790-1018",
+        "email": "info@mdy.hu",
+        "copyright": "© biztositas-hitel.hu 2010 Minden jog fenntarva.",
+        "headquarters": {
+            "label": "Székhely",
+            "address": "Budapest, 1037 Budapest, Angyalfű köz 4."
+        },
+        "office": {
+            "label": "Iroda",
+            "address": "1037 Budapest, Kolostor út 30/B. I. em."
+        },
+        "po_box": {
+            "label": "Levelezési cím",
+            "address": "1300 Budapest, Pf. 171. "
+        },
+        "open_hours": {
+            "label": "Nyitva tartás",
+            "time": "H-P: 09:00-16:00 Kedd: 08:00-20:00"
+        },
+        "regulations": {
+            "title": "Szabályzatok",
+            "services": "Szolgáltatási szabályzat",
+            "complaints": "Panaszkezelési szabályzat",
+            "privacy_policy": "Adatvédelmi szabályzat",
+            "sustainability": "Fenntarthatósági szabályzat",
+            "report": "Bejelentővédelmi rendszer"
+        },
+        "links": {
+            "title": "Hivatkozások",
+            "partners": "Partnereinknek",
+            "fbamsz": "FBAMSZ Etika Kódex",
+            "mnb": "MNB Pénzügyi Navigátor Füzetek"
+        }
+    }
+}
