@@ -1,6 +1,7 @@
 <script setup>
 import AppFooter from '@/Components/AppFooter.vue';
 import AppHeader from '@/Components/AppHeader.vue';
+import LocaleSwitcher from '@/Components/LocaleSwitcher.vue';
 import { Head } from '@inertiajs/vue3';
 defineProps({
     title: {
@@ -16,6 +17,7 @@ defineProps({
 
     <div class="flex min-h-svh flex-col">
         <AppHeader />
+        <LocaleSwitcher />
 
         <div class="py-6 lg:py-8">
             <slot />

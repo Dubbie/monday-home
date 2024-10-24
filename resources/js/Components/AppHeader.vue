@@ -3,6 +3,8 @@ import { Link } from '@inertiajs/vue3';
 import AppButton from './AppButton.vue';
 import NavLink from './NavLink.vue';
 import { ref } from 'vue';
+import ResponsiveNavLink from './ResponsiveNavLink.vue';
+import { useTrans } from '@/composables/trans';
 
 const showingMobileMenu = ref(false);
 </script>
@@ -17,13 +19,13 @@ const showingMobileMenu = ref(false);
                     </Link>
 
                     <div class="flex items-center gap-x-1">
-                        <NavLink :href="route('about-us')">Rólunk</NavLink>
-                        <NavLink :href="route('services')">Szolgáltatások</NavLink>
-                        <NavLink :href="route('contact-us')">Elérhetőségek</NavLink>
+                        <NavLink :href="route('about-us')">{{ useTrans('header.about_us') }}</NavLink>
+                        <NavLink :href="route('services')">{{ useTrans('header.services') }}</NavLink>
+                        <NavLink :href="route('contact-us')">{{ useTrans('header.contact') }}</NavLink>
                     </div>
                 </div>
 
-                <AppButton :href="route('contract')" variant="primary">Megbízom a Monday-t</AppButton>
+                <AppButton :href="route('contract')" variant="primary">{{ useTrans('header.appointment') }}</AppButton>
             </div>
         </div>
 
@@ -46,10 +48,10 @@ const showingMobileMenu = ref(false);
             </div>
 
             <div v-show="showingMobileMenu" class="flex flex-col">
-                <ResponsiveNavLink :href="route('about-us')">Rólunk</ResponsiveNavLink>
-                <ResponsiveNavLink :href="route('services')">Szolgáltatások</ResponsiveNavLink>
-                <ResponsiveNavLink :href="route('contact-us')">Elérhetőségek</ResponsiveNavLink>
-                <AppButton :href="route('contract')" variant="primary">Megbízom a Monday-t</AppButton>
+                <ResponsiveNavLink :href="route('about-us')">{{ useTrans('header.about_us') }}</ResponsiveNavLink>
+                <ResponsiveNavLink :href="route('services')">{{ useTrans('header.services') }}</ResponsiveNavLink>
+                <ResponsiveNavLink :href="route('contact-us')">{{ useTrans('header.contact') }}</ResponsiveNavLink>
+                <AppButton :href="route('contract')" variant="primary">{{ useTrans('header.appointment') }}</AppButton>
             </div>
         </div>
     </header>

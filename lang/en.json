@@ -1,0 +1,65 @@
+{
+    "company_name": "Monday Insurance Brokers Kft.",
+    "ui": {
+        "learn_more": "Learn More"
+    },
+    "header": {
+        "about_us": "About us",
+        "services": "Services",
+        "appointment": "Insurance Broker Appointment",
+        "contact": "Contact",
+        "company_insurance": "Company Insurance",
+        "condominium_insurance": "Condominium Insurance",
+        "agricultural_insurance": "Agricultural Insurance"
+    },
+    "about_us": {
+        "introduction": {
+            "title": "Background",
+            "description": "Founded in 2009 Monday became a steady actor of the Hungarian insurance intermediating market. The owners of Monday have several decades of experience in the banking, insurance and real estate sectors."
+        },
+        "mission": {
+            "title": "Mission",
+            "description": "Our aim is to develop a financial system where all client demands are answered in the same high quality standard that would satisfy the owners. Beside retail demands our network is at disposal of particular corporate needs."
+        },
+        "contribution": {
+            "title": "Mission",
+            "description": "We truly believe that the responsible financial institutes similar to Monday contribute to the development of the Hungarian insurance culture in order to reach the European level."
+        }
+    },
+    "footer": {
+        "get_in_touch": "Get in touch with us",
+        "phone": "+36 1 790-1018",
+        "email": "info@mdy.hu",
+        "copyright": "© biztositas-hitel.hu 2010 All right reserved.",
+        "headquarters": {
+            "label": "Headquarters",
+            "address": "4, Angyalfű köz, Budapest, 1037 Hungary"
+        },
+        "office": {
+            "label": "Office",
+            "address": "30/B., Kolostor street (Floor I), Budapest, 1037 Hungary"
+        },
+        "po_box": {
+            "label": "PO Box",
+            "address": "Pf. 171, Budapest, 1300 Hungary"
+        },
+        "open_hours": {
+            "label": "Open hours",
+            "time": "M-T: 09:00-16:00 Tuesday: 08:00-20:00"
+        },
+        "regulations": {
+            "title": "Regulations",
+            "services": "Regulations of Services",
+            "complaints": "Regulations of Complaints",
+            "privacy_policy": "Privacy Policy",
+            "sustainability": "Sustainability Information",
+            "report": "Report Protection System"
+        },
+        "links": {
+            "title": "Links",
+            "partners": "Login for Partners",
+            "fbamsz": "FBAMSZ Ethics Codex",
+            "mnb": "MNB Financial Navigator Booklets"
+        }
+    }
+}

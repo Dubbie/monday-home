@@ -1,28 +1,70 @@
 <script setup>
+import { useTrans } from '@/composables/trans';
 import AppContainer from './AppContainer.vue';
+import FooterLink from './FooterLink.vue';
 
-const titleClasses = "font-semibold mb-3";
+import { CheckIcon, EnvelopeIcon, LockClosedIcon, MapPinIcon, PhoneIcon } from '@heroicons/vue/16/solid';
+
+const titleClasses = "font-semibold text-white mb-3";
 </script>
 
 <template>
-    <footer class="bg-monday text-white py-6">
+    <footer class="bg-monday text-white/70 py-6">
         <AppContainer>
             <div class="flex items-start flex-col gap-y-6 lg:flex-row lg:gap-y-0 lg:gap-x-8">
                 <div class="flex-1">
-                    <h3 :class="titleClasses">Kapcsolatfelvétel</h3>
+                    <h3 :class="titleClasses">{{ useTrans('footer.get_in_touch') }}</h3>
 
-                    <p class="font-semibold">Monday Insurance Brokers Kft.</p>
-                    <p>Székhely: Itt ott</p>
+                    <p class="font-semibold text-white">{{ useTrans('company_name') }}</p>
+                    <div class="text-sm">
+                        <p class="text-sm">
+                            <MapPinIcon class="inline-block size-4 text-white flex-shrink-0 mr-1" />
+                            <span>{{ useTrans('footer.headquarters.label') }}: {{
+                                useTrans('footer.headquarters.address') }}
+                            </span>
+                        </p>
+                        <p class="text-sm">{{ useTrans('footer.office.label') }}: {{
+                            useTrans('footer.office.address') }}</p>
+                        <p class="text-sm">{{ useTrans('footer.po_box.label') }}: {{
+                            useTrans('footer.po_box.address') }}</p>
+
+                        <p class="mt-6">{{ useTrans('footer.open_hours.label') }}</p>
+                        <p>{{ useTrans('footer.open_hours.time') }}</p>
+
+                        <p class="mt-6 flex gap-x-1 items-center">
+                            <PhoneIcon class="size-4 text-white" />
+                            <span>{{ useTrans('footer.phone') }}</span>
+                        </p>
+                        <p class="flex gap-x-1 items-center">
+
+                            <EnvelopeIcon class="size-4 text-white" />
+                            <span>{{ useTrans('footer.email') }}</span>
+                        </p>
+                    </div>
                 </div>
 
                 <div class="flex-1">
-                    <h3 :class="titleClasses">Szabályzatok</h3>
-                    <p>Szolgáltatási szabályzat</p>
+                    <h3 :class="titleClasses">{{ useTrans('footer.regulations.title') }}</h3>
+
+                    <div class="text-sm">
+                        <FooterLink :icon="CheckIcon" :label="useTrans('footer.regulations.services')" href="#!" />
+                        <FooterLink :icon="CheckIcon" :label="useTrans('footer.regulations.complaints')" href="#!" />
+                        <FooterLink :icon="CheckIcon" :label="useTrans('footer.regulations.privacy_policy')"
+                            href="#!" />
+                        <FooterLink :icon="CheckIcon" :label="useTrans('footer.regulations.sustainability')"
+                            href="#!" />
+                        <FooterLink :icon="CheckIcon" :label="useTrans('footer.regulations.report')" href="#!" />
+                    </div>
                 </div>
 
                 <div class="flex-1">
-                    <h3 :class="titleClasses">Hivatkozások</h3>
-                    <p>Partnereinknek</p>
+                    <h3 :class="titleClasses">{{ useTrans('footer.links.title') }}</h3>
+
+                    <div class="text-sm">
+                        <FooterLink :icon="LockClosedIcon" :label="useTrans('footer.links.partners')" href="#!" />
+                        <FooterLink :icon="LockClosedIcon" :label="useTrans('footer.links.fbamsz')" href="#!" />
+                        <FooterLink :icon="LockClosedIcon" :label="useTrans('footer.links.mnb')" href="#!" />
+                    </div>
                 </div>
 
                 <div class="flex justify-end flex-shrink-0">
@@ -31,7 +73,7 @@ const titleClasses = "font-semibold mb-3";
             </div>
 
             <div class="text-xs mt-6">
-                <p>biztositas-hitel.hu</p>
+                <p>{{ useTrans('footer.copyright') }}</p>
             </div>
         </AppContainer>
     </footer>

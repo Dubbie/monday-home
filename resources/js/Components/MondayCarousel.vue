@@ -1,41 +1,42 @@
 <script setup>
 import { ref } from 'vue';
 import CarouselEntry from './CarouselEntry.vue';
+import { useTrans } from '@/composables/trans';
 
 const currentStep = ref(0);
 
 const carouselEntries = [
     {
         imageUrl: '/img/1.jpg',
-        title: 'Szolgáltatások',
+        title: useTrans('header.services'),
         link: route('services')
     },
     {
         imageUrl: '/img/2.jpg',
-        title: 'Megbízom a Monday-t',
+        title: useTrans('header.appointment'),
         link: route('contract')
     },
     {
         imageUrl: '/img/3.jpg',
-        title: 'Elérhetőségek',
+        title: useTrans('header.contact'),
         link: route('contact-us')
     },
     {
 
         imageUrl: '/img/4.jpg',
-        title: 'Cégbiztosítás',
+        title: useTrans('header.company_insurance'),
         link: route('contact-us')
     },
     {
 
         imageUrl: '/img/5.jpg',
-        title: 'Társasház biztosítás',
+        title: useTrans('header.condominium_insurance'),
         link: route('contact-us')
     },
     {
 
         imageUrl: '/img/6.jpg',
-        title: 'Mezőgazdasági Biztosítások',
+        title: useTrans('header.agricultural_insurance'),
         link: route('contact-us')
     }
 ];
