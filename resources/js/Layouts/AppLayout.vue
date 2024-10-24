@@ -5,6 +5,7 @@ import AppContainer from '@/Components/AppContainer.vue';
 import AppButton from '@/Components/AppButton.vue';
 import AppAlert from '@/Components/AppAlert.vue';
 import LocaleSwitcher from '@/Components/LocaleSwitcher.vue';
+import TransferNotice from '@/Components/TransferNotice.vue';
 import { Head } from '@inertiajs/vue3';
 import { useTrans } from '@/composables/trans.js';
 
@@ -43,6 +44,9 @@ defineProps({
                     </div>
                 </AppAlert>
             </AppContainer>
+
+            <!-- Stock Transfer Notice -->
+            <TransferNotice />
 
             <slot />
         </div>

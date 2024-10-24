@@ -40,7 +40,8 @@ class HandleInertiaRequests extends Middleware
             ],
             'locale' => App::currentLocale(),
             'locales' => config('app.available_locales'),
-            'translations' => File::exists($translationFile) ? File::json($translationFile) : []
+            'translations' => File::exists($translationFile) ? File::json($translationFile) : [],
+            'notice_read' => fn() => $request->session()->get('notice_read', false)
         ];
     }
 }
