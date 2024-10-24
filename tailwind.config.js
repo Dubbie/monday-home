@@ -12,9 +12,15 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                monday: '#3baa34'
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            maxWidth: {
+                monday: '1024px'
+            }
         },
     },
 

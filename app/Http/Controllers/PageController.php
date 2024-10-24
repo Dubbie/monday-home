@@ -15,4 +15,14 @@ class PageController extends Controller
     {
         return Inertia::render('Services');
     }
+
+    public function contact()
+    {
+        return Inertia::render('ContactUs');
+    }
+
+    public function contract()
+    {
+        return Inertia::render('Contract');
+    }
 }

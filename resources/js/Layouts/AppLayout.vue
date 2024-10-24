@@ -1,4 +1,5 @@
 <script setup>
+import AppFooter from '@/Components/AppFooter.vue';
 import AppHeader from '@/Components/AppHeader.vue';
 import { Head } from '@inertiajs/vue3';
 defineProps({
@@ -13,12 +14,13 @@ defineProps({
 
     <Head :title="title" />
 
-    <div class="flex min-h-full flex-col">
+    <div class="flex min-h-svh flex-col">
         <AppHeader />
 
-        <div>
+        <div class="py-6 lg:py-8">
             <slot />
-
         </div>
+
+        <AppFooter class="flex-grow" />
     </div>
 </template>
