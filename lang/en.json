@@ -26,6 +26,11 @@
             "description": "We truly believe that the responsible financial institutes similar to Monday contribute to the development of the Hungarian insurance culture in order to reach the European level."
         }
     },
+    "contract": {
+        "tos": "Terms and Conditions (PDF)",
+        "privacy_policy": "Privacy Policy",
+        "e_marketing": "Consent Declaration for E-Marketing"
+    },
     "services": {
         "audit": {
             "title": "Insurance Audit",

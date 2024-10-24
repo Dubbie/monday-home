@@ -14,6 +14,10 @@ const props = defineProps({
         type: String,
         default: 'button',
     },
+    size: {
+        type: String,
+        default: 'md',
+    },
 });
 
 const colorClasses = computed(() => {
@@ -24,14 +28,21 @@ const colorClasses = computed(() => {
         ghost: 'bg-transparent text-black font-medium hover:bg-black/5',
     }[props.variant];
 });
+
+const sizeClasses = computed(() => {
+    return {
+        md: 'px-4 py-2.5',
+        sm: 'px-2 py-2',
+    }[props.size];
+});
 </script>
 
 <template>
     <component
         :is="href ? Link : 'button'"
         :href="href"
-        class="inline-flex h-10 items-center justify-center gap-x-2 rounded-md px-4 text-sm"
-        :class="[colorClasses]"
+        class="inline-flex items-center justify-center gap-x-2 rounded-md text-sm"
+        :class="[colorClasses, sizeClasses]"
         :type="type"
     >
         <slot />
