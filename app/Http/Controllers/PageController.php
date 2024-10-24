@@ -26,6 +26,11 @@ class PageController extends Controller
         return Inertia::render('Contract');
     }
 
+    public function transfer()
+    {
+        return Inertia::render('Transfer');
+    }
+
     public function companyInsurance()
     {
         return Inertia::render('CompanyInsurance');

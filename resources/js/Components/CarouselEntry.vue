@@ -1,9 +1,9 @@
 <script setup>
-
 import { useTrans } from '@/composables/trans';
 import AppButton from './AppButton.vue';
 import { ArrowRightIcon } from '@heroicons/vue/16/solid';
-const props = defineProps({
+
+defineProps({
     imageUrl: {
         type: String,
         required: true,
@@ -14,19 +14,21 @@ const props = defineProps({
     },
     link: {
         type: String,
-        required: true
-    }
-})
+        required: true,
+    },
+});
 </script>
 
 <template>
-    <div class="relative flex-shrink-0 w-full">
-        <img :src="imageUrl" alt="" class="object-cover h-full w-full">
+    <div class="relative w-full flex-shrink-0">
+        <img :src="imageUrl" alt="" class="h-full w-full object-cover" />
 
-        <div class="absolute bottom-10 right-0 bg-black/60 backdrop-blur p-8 text-white">
-            <p class="text-2xl font-medium mb-4">{{ title }}</p>
+        <div
+            class="absolute bottom-10 right-0 bg-black/60 p-8 text-white backdrop-blur"
+        >
+            <p class="mb-4 text-2xl font-medium">{{ title }}</p>
 
-            <AppButton variant="green" :href="link">
+            <AppButton variant="primary" color="green" :href="link">
                 <span>{{ useTrans('ui.learn_more') }}</span>
                 <ArrowRightIcon class="size-4" />
             </AppButton>

@@ -1,5 +1,6 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
+import typography from '@tailwindcss/typography';
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -13,16 +14,16 @@ export default {
     theme: {
         extend: {
             colors: {
-                monday: '#3baa34'
+                monday: '#3baa34',
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
             maxWidth: {
-                monday: '1024px'
-            }
+                monday: '1024px',
+            },
         },
     },
 
-    plugins: [forms],
+    plugins: [forms, typography],
 };
