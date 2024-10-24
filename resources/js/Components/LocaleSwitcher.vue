@@ -1,5 +1,5 @@
 <script setup>
-import { usePage, Link } from '@inertiajs/vue3';
+import { usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
 
 const locales = computed(() => {

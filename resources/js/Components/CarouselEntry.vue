@@ -2,6 +2,7 @@
 
 import { useTrans } from '@/composables/trans';
 import AppButton from './AppButton.vue';
+import { ArrowRightIcon } from '@heroicons/vue/16/solid';
 const props = defineProps({
     imageUrl: {
         type: String,
@@ -25,7 +26,10 @@ const props = defineProps({
         <div class="absolute bottom-10 right-0 bg-black/60 backdrop-blur p-8 text-white">
             <p class="text-2xl font-medium mb-4">{{ title }}</p>
 
-            <AppButton variant="green" :href="link">{{ useTrans('ui.learn_more') }}</AppButton>
+            <AppButton variant="green" :href="link">
+                <span>{{ useTrans('ui.learn_more') }}</span>
+                <ArrowRightIcon class="size-4" />
+            </AppButton>
         </div>
     </div>
 </template>

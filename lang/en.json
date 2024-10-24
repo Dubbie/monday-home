@@ -26,6 +26,73 @@
             "description": "We truly believe that the responsible financial institutes similar to Monday contribute to the development of the Hungarian insurance culture in order to reach the European level."
         }
     },
+    "services": {
+        "audit": {
+            "title": "Insurance Audit",
+            "headline": "Examination of existing insurance status and analysis of living insurance policies",
+            "description": "We analyze all the living contracts of the client. We check all existing insurance contracts with the concerned insurance companies by taking into consideration the general terms and conditions. In this context:",
+            "payment_status": "We check the payment status of insurance premiums",
+            "overview": "We make an overview of the risks covered by the insurance contracts, the exclusions, and exemptions regarding damages, the limits, the deductibles, and any other relevant information contained in the existing policy."
+        },
+        "needs": {
+            "title": "Analysis of Needs",
+            "principal": "We assess the risks according to the principal activity and the locations of the client.",
+            "claims": "We assess the risks associated with the activities of the client by considering the possible claims that can happen to or maybe caused by the client.",
+            "assistance": "We provide our assistance in determining the correct values of the insured sums.",
+            "special": "We analyze the special insurance and risk management needs, the areas of responsibility, and risk carrying willingness of our client.",
+            "tools": "With the help of the necessary tools (personal discussions, site visits, questionnaires, etc..) We assess the insurance needs of the client."
+        },
+        "tender": {
+            "title": "Competetive Tender",
+            "proposals": "When possible, as part of a tender we ask for insurance proposals from local companies and if needed we consult with international risk carriers as well.",
+            "coverage": "When existing contracts do not allow the tender (for example because it is not possible to change during the year) , we deal with the insurance company handling the living contracts to set up the optimal coverage by taking into consideration the best premium-quality ratio."
+        },
+        "legal_changes": {
+            "title": "Tracking Changes In Legal Regulation",
+            "options": "By utilizing the insurance field and an up to date knowledge of our partners in insurance law we create the legal options for our clients to help them ceasing every opportunity which can bring them a favorable situation"
+        },
+        "premium_payment": {
+            "title": "Coordiation of Premium Payment",
+            "monitor": "During our mandate we continuously monitor the premium payment of our client and if necessary, we warn our client to the payment delay or failure.",
+            "compare": "We compare the invoices issued by insurers with the premiums figuring on the policies, in order to get the proper insurance billing."
+        },
+        "daily_administration": {
+            "title": "Daily Administration",
+            "description": "In addition to the above, our colleagues are at our client’s disposal in all matters related to insurance. Such example is international green card release, certificate of beneficiary release, information, advice in insurance issue, transfer bonuses, insurance certificates, notification of data changes, etc."
+        },
+        "evaluation": {
+            "title": "Evaluation",
+            "real_risk": "After assessing the potential risks associated with the client activity and the property values, our experts identify the scope, the potential dangers and threatening events of the client in terms of the “real risk”",
+            "compare": "If the risk requires, we suggest the level of maximum possible damage with the proposal for deductibles. Comparing the premium and the probability of the risk allows insuring the real possible risks; furthermore the premium-risk ratio can be set in the best proportion for the client.",
+            "questionnaire": "Based on questionnaires, the risk analysis and the living insurance policies of the client, the broker prepares the assessment of the current insurance situation, paying particular attention to the uninsured risks"
+        },
+        "tracking_changes": {
+            "title": "Tracking Changes",
+            "data": "Based on the information provided by the client we continuously monitor the changes in activity and in asset value, we propose the necessary additions, covering emerging risks during any modification by updating the insurance scheme. Based on the instructions of the client we initiate the agreed modification in the existing policy. In order to maintain adequate insurance, it is essential to always obtain accurate and fast updated data from the client."
+        },
+        "new_options": {
+            "title": "Introducing New Options",
+            "monitor": "We continuously monitor new insurance products on the market, and if they present favorable opportunities for our client we prepare a detailed description of the new possibility"
+        },
+        "anniversary_renewal": {
+            "title": "Anniversary Renewal",
+            "quote": "In the appropriate time before the anniversary date of the insurance - if the changes in the market make it necessary - we ask for quotes from insurance companies, typically in the context of a multi-round tender so that our client can always have the best contract."
+        },
+        "claim_settlement": {
+            "title": "Claim Settlement",
+            "description": "If a claim occurs we provide our assistance to the client, provided that the client informs us as soon as possible of all relevant details in connection with the claim. Considering the fact that the insurance claim settlement differs from one type of policy to another (property insurance, construction all risks insurance, car insurance, liability insurance...) it also means that our service can also vary significantly due to the relevant duties in connection with the occurred claim.",
+            "heading": "In connection with our claim settlement agreement",
+            "declaration": "Our experts make the proper claim declaration, provided that all the necessary information is at our disposal",
+            "claim": "If needed we make the claim declaration formulated by the client.",
+            "organize": "Upon request we organize the expertise and if needed we participate in the event.",
+            "cooperation": "We take part in the whole claim settlement process, we offer our assistance in the formulation of the claim demand, we help to collect and transmit to the insurance companies the most relevant claim settlement documents.",
+            "coordination": "We coordinate the claim settlement process, if necessary we organize the negotiations with the insurance company where we fully represent the client’s interests.",
+            "third_party": "Our involvement in the claim settlement process does not concern the contact and consultancy with potential third parties injured in a claim. ",
+            "record": "Our company keeps a record of all claims where the client is involved."
+        },
+        "pdf_hungarian": "Download Original (Hungarian, PDF)",
+        "pdf_english": "Download Original (English, PDF)"
+    },
     "footer": {
         "get_in_touch": "Get in touch with us",
         "phone": "+36 1 790-1018",
