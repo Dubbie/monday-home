@@ -15,7 +15,7 @@ const titleClasses = 'font-semibold text-white mb-3';
 </script>
 
 <template>
-    <footer class="bg-monday py-6 text-white/70">
+    <footer class="bg-monday py-6 text-white/70 lg:py-12">
         <AppContainer>
             <div
                 class="flex flex-col items-start gap-y-6 lg:flex-row lg:gap-x-8 lg:gap-y-0"
