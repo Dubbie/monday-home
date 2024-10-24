@@ -25,4 +25,14 @@ class PageController extends Controller
     {
         return Inertia::render('Contract');
     }
+
+    public function companyInsurance()
+    {
+        return Inertia::render('CompanyInsurance');
+    }
+
+    public function propertyAndLiability()
+    {
+        return Inertia::render('PropertyAndLiability');
+    }
 }
