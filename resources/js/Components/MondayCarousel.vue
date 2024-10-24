@@ -64,10 +64,10 @@ const goTo = (index) => {
             <div
                 v-for="(entry, index) in carouselEntries"
                 :key="index"
-                class="size-3 cursor-pointer rounded-full backdrop-blur"
+                class="size-3 cursor-pointer rounded-full backdrop-blur transition-all"
                 :class="{
                     'bg-black': index === currentStep,
-                    'bg-black/50': index !== currentStep,
+                    'bg-black/40 hover:bg-monday': index !== currentStep,
                 }"
                 @click="goTo(index)"
             ></div>
