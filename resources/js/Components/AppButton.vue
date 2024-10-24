@@ -37,7 +37,8 @@ const classMap = {
         green: 'bg-green-500 text-white font-semibold hover:bg-green-400',
     },
     default: {
-        default: 'bg-white ring-1 ring-zinc-200 font-medium',
+        default:
+            'bg-white ring-1 ring-zinc-200 font-medium hover:bg-zinc-100 hover:ring-zinc-300',
         blue: 'bg-transparent ring-1 ring-blue-500 font-medium hover:bg-blue-500 hover:text-white',
         green: 'bg-transparent ring-1 ring-green-500 font-medium hover:bg-green-500 hover:text-white',
     },
