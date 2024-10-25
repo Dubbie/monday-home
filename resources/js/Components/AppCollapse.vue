@@ -13,29 +13,49 @@ defineProps({
 });
 
 const isOpen = ref(false);
+
+const onBeforeEnter = (el) => {
+    el.style.height = '0';
+    el.style.overflow = 'hidden';
+};
+
+const onEnter = (el) => {
+    el.style.transition = 'height 0.3s ease';
+    el.style.height = el.scrollHeight + 'px';
+};
+
+const onAfterEnter = (el) => {
+    el.style.height = 'auto';
+    el.style.overflow = '';
+};
+
+const onBeforeLeave = (el) => {
+    el.style.height = el.scrollHeight + 'px';
+    el.style.overflow = 'hidden';
+};
+
+const onLeave = (el) => {
+    el.style.transition = 'height 0.3s cubic-bezier(0, 1, 0.5, 1)';
+    el.style.height = '0';
+};
 </script>
 
 <template>
-    <div class="">
-        <div
-            class="flex cursor-pointer select-none items-center gap-x-2"
-            @click="isOpen = !isOpen"
-        >
+    <div>
+        <div class="flex cursor-pointer select-none items-center gap-x-2" @click="isOpen = !isOpen">
             <component :is="icon" class="size-6" />
             <p class="text-xl font-semibold">{{ title }}</p>
         </div>
 
-        <transition
-            enter-active-class="transition transform ease-in-out duration-300"
-            enter-from-class="opacity-0 -translate-y-6"
-            enter-to-class="opacity-100 translate-y-0"
-            leave-active-class="transition transform ease-in-out duration-300"
-            leave-from-class="opacity-100 translate-y-0"
-            leave-to-class="opacity-0 -translate-y-6"
-        >
-            <div v-show="isOpen" class="pt-3 text-sm text-zinc-600">
+        <Transition @before-enter="onBeforeEnter" @enter="onEnter" @after-enter="onAfterEnter"
+            @before-leave="onBeforeLeave" @leave="onLeave">
+            <div v-show="isOpen" class="text-sm text-zinc-600">
                 <slot />
             </div>
-        </transition>
+        </Transition>
     </div>
 </template>
+
+<style scoped>
+/* Add custom styling if needed */
+</style>
