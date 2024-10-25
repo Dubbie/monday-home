@@ -1,66 +1,139 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Monday Home Page
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository contains the source code for the **Monday** company homepage, built with Laravel, Vue, and Inertia.js. It includes fundamental pages like "About Us," "Contact," and services information, as well as forms for insurance quote requests. Below you'll find details on setting up the development environment, deploying to production, and the tools used in this project.
 
-## About Laravel
+## Features
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+-   Built with Laravel and the Breeze starter kit (Inertia.js + Vue integration)
+-   Responsive UI
+-   Insurance quote request forms
+-   User-friendly navigation and design for accessibility
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Prerequisites
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+-   **Docker** and **DDEV**: To standardize local development
+-   **Node.js** and **npm**: For frontend dependency management and builds
+-   **Composer**: For PHP dependency management
+-   **Ploi**: For deployment (see deployment instructions below)
 
-## Learning Laravel
+## Getting Started
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Clone the Repository
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+```bash
+git clone https://github.com/dubbie/monday-homepage.git
+cd monday-homepage
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Set Up Environment Variables
 
-## Laravel Sponsors
+Duplicate the `.env.example` file, name it `.env`, and adjust the settings as necessary. Don't forget to set the recipient.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+cp .env.example .env
+```
 
-### Premium Partners
+### Install Dependencies
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+Ensure that Composer and npm dependencies are installed.
 
-## Contributing
+```bash
+composer install
+npm install
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Development Environment with DDEV
 
-## Code of Conduct
+This project uses [DDEV](https://ddev.readthedocs.io/en/stable/) for containerized local development, providing a consistent and isolated setup.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1. **Start DDEV**: Make sure Docker is running, then start DDEV.
 
-## Security Vulnerabilities
+    ```bash
+    ddev start
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+2. **Install Composer Packages**: After setting up DDEV, install the composer packages.
 
-## License
+    ```bash
+    ddev composer install
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+3. **Install NPM Packages**: After the composer packages are installed, install the NPM packages.
+
+    ```bash
+    ddev npm install
+    ```
+
+4. **Run Migrations**:
+   After the packages are installed, run the migrations to set up the database.
+
+    ```bash
+    ddev artisan migrate
+    ```
+
+5. **Run the Dev Server**:
+   To start the development server and view your changes in real-time:
+    ```bash
+    ddev npm run dev
+    ```
+
+Access the application at `http://monday-home.ddev.site` (or as configured in your DDEV setup). You may need to run additional commands such as `ddev artisan key:generate` when first starting the application.
+
+### Helpful DDEV Commands
+
+-   **Stop DDEV**: `ddev stop`
+-   **Access the Laravel Artisan CLI**: `ddev artisan`
+
+## Deployment
+
+For deployment, this project uses **Ploi** as a server management tool, although the deployment steps outlined here are general and can be adapted to other environments.
+
+### Deployment Pipeline (Generalized)
+
+1. **Set up the Server**:
+
+    - Ensure PHP, Node.js, and Composer are installed.
+    - Set up a database and update the `.env` file with the production database credentials.
+
+2. **Clone the Repository**:
+   Clone the project to the server.
+
+    ```bash
+    git clone https://github.com/dubbie/monday-homepage.git
+    cd monday-homepage
+    ```
+
+3. **Install Production Dependencies**:
+   Run Composer and npm installations in production mode.
+
+    ```bash
+    composer install --optimize-autoloader --no-dev
+    npm ci --only=production
+    npm run build
+    ```
+
+4. **Configure Environment**:
+
+    - Copy `.env.example` to `.env` and update environment variables, including database credentials and any other production-specific settings.
+
+5. **Run Migrations**:
+   Apply database migrations to set up tables in the production database.
+
+    ```bash
+    php artisan migrate --force
+    ```
+
+6. **Optimize for Production**:
+   Optimize application settings for improved performance.
+
+    ```bash
+    php artisan config:cache
+    php artisan route:cache
+    php artisan view:cache
+    ```
+
+7. **Set Up a Deployment Workflow** (optional but recommended):
+   Use a CI/CD tool or a Ploi deployment hook to automate steps like pulling changes from the main branch, installing dependencies, and clearing the cache.
+
+8. **Configure Web Server and SSL**:
+    - Use Nginx/Apache as a web server, and configure SSL (Ploi provides automatic SSL via Let's Encrypt).
