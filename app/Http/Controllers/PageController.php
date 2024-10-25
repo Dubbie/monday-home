@@ -41,10 +41,8 @@ class PageController extends Controller
         return Inertia::render('PropertyAndLiability');
     }
 
-    public function quoteSent(string $type)
+    public function cargoInsurance()
     {
-        return Inertia::render('QuoteSent', [
-            'type' => $type
-        ]);
+        return Inertia::render('CargoInsurance');
     }
 }

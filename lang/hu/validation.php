@@ -200,6 +200,7 @@ return [
         'liability_insurance' => 'Felelősségbiztosítás',
         'inventory_insurance' => 'Árukészlet biztosítás',
         'architect_installation_insurance' => 'Építész-szerelés biztosítás',
+        'shipping_area' => 'Szállítmányozási terület',
         'message' => 'Üzenet'
     ],
 

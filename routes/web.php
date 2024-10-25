@@ -12,6 +12,7 @@ Route::get('/transfer', [PageController::class, 'transfer'])->name('transfer');
 
 Route::get('/insurance/company', [PageController::class, 'companyInsurance'])->name('insurance.company');
 Route::get('/insurance/property-and-liability', [PageController::class, 'propertyAndLiability'])->name('insurance.property-and-liability');
+Route::get('/insurance/cargo', [PageController::class, 'cargoInsurance'])->name('insurance.cargo');
 
 Route::get('/quote/sent/{type}', [PageController::class, 'quoteSent'])->name('quote.sent');
 
