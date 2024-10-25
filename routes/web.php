@@ -14,6 +14,7 @@ Route::get('/insurance/company', [PageController::class, 'companyInsurance'])->n
 Route::get('/insurance/property-and-liability', [PageController::class, 'propertyAndLiability'])->name('insurance.property-and-liability');
 Route::get('/insurance/cargo', [PageController::class, 'cargoInsurance'])->name('insurance.cargo');
 Route::get('/insurance/life', [PageController::class, 'lifeInsurance'])->name('insurance.life');
+Route::get('/insurance/liability', [PageController::class, 'liabilityInsurance'])->name('insurance.liability');
 
 Route::get('/quote/sent/{type}', [PageController::class, 'quoteSent'])->name('quote.sent');
 

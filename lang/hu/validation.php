@@ -204,6 +204,7 @@ return [
         'accident_insurance' => 'Balesetbiztosítás',
         'life_insurance' => 'Életbiztosítás',
         'health_insurance' => 'Egészségbiztosítás',
+        'investment_cost' => 'Projektenkénti beruházási költség',
         'message' => 'Üzenet'
     ],
 

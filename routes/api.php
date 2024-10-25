@@ -14,4 +14,5 @@ Route::group([
     Route::post('/insurance/property-and-liability', [QuoteController::class, 'sendPropertyAndLiabilityInsuranceQuote'])->name('api.quote.property-and-liability');
     Route::post('/insurance/cargo', [QuoteController::class, 'sendCargoInsuranceQuote'])->name('api.quote.cargo');
     Route::post('/insurance/life', [QuoteController::class, 'sendLifeInsuranceQuote'])->name('api.quote.life');
+    Route::post('/insurance/liability', [QuoteController::class, 'sendLiabilityInsuranceQuote'])->name('api.quote.liability');
 });

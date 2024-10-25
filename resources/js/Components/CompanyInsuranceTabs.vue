@@ -25,6 +25,10 @@ import AppTab from '@/Components/AppTab.vue';
             :href="route('insurance.life')"
             :active="route().current('insurance.life')"
         />
-        <AppTab label="Felelősségbiztosítás" />
+        <AppTab
+            label="Felelősségbiztosítás"
+            :href="route('insurance.liability')"
+            :active="route().current('insurance.liability')"
+        />
     </TabContainer>
 </template>
