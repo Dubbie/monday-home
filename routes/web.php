@@ -10,8 +10,8 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact-us');
 Route::get('/contract', [PageController::class, 'contract'])->name('contract');
 Route::get('/transfer', [PageController::class, 'transfer'])->name('transfer');
 
-Route::get('/company-insurance', [PageController::class, 'companyInsurance'])->name('company-insurance');
-Route::get('/property-and-liability-insurance', [PageController::class, 'propertyAndLiability'])->name('property-and-liability-insurance');
+Route::get('/insurance/company', [PageController::class, 'companyInsurance'])->name('insurance.company');
+Route::get('/insurance/property-and-liability', [PageController::class, 'propertyAndLiability'])->name('insurance.property-and-liability');
 
 
 Route::get('/locale/{locale}', [LocaleController::class, 'update'])->name('locale.set');

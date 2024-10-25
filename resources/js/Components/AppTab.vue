@@ -18,16 +18,13 @@ defineProps({
 </script>
 
 <template>
-    <component
-        :is="href ? Link : 'button'"
-        :href="href"
-        class="inline-flex w-full items-center justify-center whitespace-nowrap border px-3 py-2"
+    <component :is="href ? Link : 'button'" :href="href"
+        class="inline-flex w-full items-center justify-center whitespace-nowrap font-medium border-b-2 px-3 py-2 -mb-px"
         :class="{
-            'border-zinc-200 border-b-white': active,
-            'border-transparent text-monday hover:border-b-zinc-200 hover:bg-zinc-50':
+            'border-black text-black': active,
+            'border-transparent text-zinc-500':
                 !active,
-        }"
-    >
+        }">
         {{ label }}
     </component>
 </template>

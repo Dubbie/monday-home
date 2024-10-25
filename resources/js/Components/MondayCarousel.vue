@@ -26,7 +26,7 @@ const carouselEntries = [
     {
         imageUrl: '/img/4.jpg',
         title: useTrans('header.company_insurance'),
-        link: route('company-insurance'),
+        link: route('insurance.company'),
     },
     {
         imageUrl: '/img/5.jpg',

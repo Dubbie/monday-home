@@ -5,16 +5,10 @@ import AppTab from '@/Components/AppTab.vue';
 
 <template>
     <TabContainer>
-        <AppTab
-            label="Szakmai Felelősségbiztosítás"
-            :href="route('company-insurance')"
-            :active="route().current('company-insurance')"
-        />
-        <AppTab
-            label="Vagyon- és felelősségbiztosítás"
-            :href="route('property-and-liability-insurance')"
-            :active="route().current('property-and-liability-insurance')"
-        />
+        <AppTab label="Szakmai Felelősségbiztosítás" :href="route('insurance.company')"
+            :active="route().current('insurance.company')" />
+        <AppTab label="Vagyon- és felelősségbiztosítás" :href="route('insurance.property-and-liability')"
+            :active="route().current('insurance.property-and-liability')" />
         <AppTab label="Szállítmánybiztosítások" />
         <AppTab label="Élet- és Balesetbiztosítások" />
         <AppTab label="Felelősségbiztosítás" />
