@@ -12,13 +12,13 @@ const props = defineProps({
 const alertClasses = computed(() => {
     return {
         red: 'bg-red-200 text-red-600',
-        blue: 'bg-indigo-500 text-white',
+        indigo: 'bg-indigo-600 text-white',
     }[props.color];
 });
 </script>
 
 <template>
-    <div class="py-2" :class="alertClasses">
+    <div class="py-3" :class="alertClasses">
         <AppContainer>
             <slot />
         </AppContainer>

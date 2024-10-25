@@ -1,6 +1,9 @@
 {
     "company_name": "Monday Insurance Brokers Kft.",
-    "alert": "View the details on the stock transfer.",
+    "alert": {
+        "title": "Stock Transfer!",
+        "description": "Read more about the details of the stock transfer."
+    },
     "ui": {
         "learn_more": "Learn More"
     },

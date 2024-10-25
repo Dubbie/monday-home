@@ -32,7 +32,6 @@ const fields = [
 
 const handleValidationErrors = (errors) => {
     for (const key of Object.keys(errors)) {
-        // form.errors[key] = errors[key][0];
         form.setError(key, errors[key][0]);
     }
 };

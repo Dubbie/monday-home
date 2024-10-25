@@ -46,6 +46,9 @@ const classMap = {
         green: 'bg-monday text-white font-semibold hover:bg-green-500',
         white: 'bg-white text-zinc-800 font-semibold hover:bg-zinc-100',
     },
+    primaryInverse: {
+        indigo: 'bg-white text-indigo-600 font-semibold hover:outline hover:outline-white/20 hover:text-indigo-500',
+    },
     default: {
         default:
             'bg-white ring-1 ring-zinc-200 font-medium hover:bg-zinc-100 hover:ring-zinc-300',
