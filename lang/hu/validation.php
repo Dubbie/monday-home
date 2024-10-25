@@ -190,10 +190,16 @@ return [
     */
 
     'attributes' => [
+        'name' => 'Név',
         'company_name' => 'Cégnév',
         'email' => 'E-mail cím',
         'phone' => 'Telefonszám',
         'professional_activity' => 'Szakmai tevékenység',
+        'need_information' => 'Tájékoztatást kérek',
+        'building_insurance' => 'Épület biztosítás',
+        'liability_insurance' => 'Felelősségbiztosítás',
+        'inventory_insurance' => 'Árukészlet biztosítás',
+        'architect_installation_insurance' => 'Építész-szerelés biztosítás',
         'message' => 'Üzenet'
     ],
 

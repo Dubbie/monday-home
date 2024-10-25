@@ -7,6 +7,9 @@ import TextareaInputTransparent from '@/Components/TextareaInputTransparent.vue'
 import InputError from '@/Components/InputError.vue';
 import { ref, watch } from 'vue';
 import { EnvelopeIcon } from '@heroicons/vue/24/outline';
+import SelectInput from './SelectInput.vue';
+
+const textInputTypes = ['text', 'tel', 'email'];
 
 const props = defineProps({
     fields: Array, // Field configurations (label, type, modelKey)
@@ -60,7 +63,7 @@ watch(
                     }}</InputLabel>
 
                     <TextInputTransparent
-                        v-if="field.type !== 'textarea'"
+                        v-if="textInputTypes.includes(field.type)"
                         :type="field.type"
                         :id="field.modelKey"
                         v-model="formData[field.modelKey]"
@@ -68,8 +71,15 @@ watch(
                         @keyup="$emit('clearError', field.modelKey)"
                     />
 
+                    <SelectInput
+                        v-if="field.type === 'select'"
+                        :options="field.options"
+                        class="w-full text-sm"
+                        v-model="formData[field.modelKey]"
+                    />
+
                     <TextareaInputTransparent
-                        v-else
+                        v-if="field.type === 'textarea'"
                         :id="field.modelKey"
                         v-model="formData[field.modelKey]"
                         rows="4"

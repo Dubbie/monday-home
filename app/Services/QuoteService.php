@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Mail;
 class QuoteService
 {
     public const COMPANY_INSURANCE = 'company';
+    public const PROPERTY_AND_LIABILITY_INSURANCE = 'property-and-liability';
 
     /**
      * Handles the new quote submission.
@@ -61,6 +62,8 @@ class QuoteService
         switch ($insuranceType) {
             case self::COMPANY_INSURANCE:
                 return 'Szakmai Felelősségbiztosítás';
+            case self::PROPERTY_AND_LIABILITY_INSURANCE:
+                return 'Vagyon- és felelősségbiztosítás';
             default:
                 return $insuranceType . '(Ismeretlen)';
         }

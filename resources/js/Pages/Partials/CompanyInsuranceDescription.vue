@@ -32,27 +32,34 @@ const insuranceTypes = [
     'Állatorvosi felelősségbiztosítás',
     'Építészek felelősségbiztosítása',
     'Önálló bírósági végrehajtók felelősségbiztosítása',
-    'Őrző és védő szolgáltatók felelősségbiztosítása'
+    'Őrző és védő szolgáltatók felelősségbiztosítása',
 ];
 </script>
 
 <template>
     <div>
-        <h2 class="font-semibold mb-3 text-lg">Szakmai Felelősségbiztosítás</h2>
+        <h2 class="mb-3 text-lg font-semibold">Szakmai Felelősségbiztosítás</h2>
 
         <div class="text-zinc-600">
-            <p class="mb-3">A szakmai felelősségbiztosítás lényege, hogy a cég által nyújtott szolgáltatás,
-                vagy végzett
-                tevékenysége
-                során megbízójának, vevőjének okozott kárt átvállalja és azt megtérítse.</p>
+            <p class="mb-3">
+                A szakmai felelősségbiztosítás lényege, hogy a cég által
+                nyújtott szolgáltatás, vagy végzett tevékenysége során
+                megbízójának, vevőjének okozott kárt átvállalja és azt
+                megtérítse.
+            </p>
 
-            <p class="text-sm mb-3 italic">Akármelyik szakmában végzi vállalata, vállalkozása a tevékenységét talál
-                nálunk
-                olyan formációt, mely a
-                szükséges kockázatokat a kellő mértékben le képes fedni.</p>
+            <p class="mb-3 text-sm italic">
+                Akármelyik szakmában végzi vállalata, vállalkozása a
+                tevékenységét talál nálunk olyan formációt, mely a szükséges
+                kockázatokat a kellő mértékben le képes fedni.
+            </p>
 
             <ul>
-                <ListItem v-for="(insurance, index) in insuranceTypes" :key="index">{{ insurance }}</ListItem>
+                <ListItem
+                    v-for="(insurance, index) in insuranceTypes"
+                    :key="index"
+                    >{{ insurance }}</ListItem
+                >
             </ul>
         </div>
     </div>

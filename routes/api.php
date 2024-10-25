@@ -11,4 +11,5 @@ Route::group([
     'prefix' => 'quote'
 ], function () {
     Route::post('/insurance/company', [QuoteController::class, 'sendCompanyInsuranceQuote'])->name('api.quote.company');
+    Route::post('/insurance/property-and-liability', [QuoteController::class, 'sendPropertyAndLiabilityInsuranceQuote'])->name('api.quote.property-and-liability');
 });
