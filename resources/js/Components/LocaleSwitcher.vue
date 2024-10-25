@@ -6,6 +6,9 @@ import AppContainer from './AppContainer.vue';
 const locales = computed(() => {
     return usePage().props.locales;
 });
+const currentLocale = computed(() => {
+    return usePage().props.locale;
+});
 </script>
 
 <template>
@@ -15,6 +18,9 @@ const locales = computed(() => {
                 <a
                     v-for="locale in locales"
                     class="cursor-pointer p-2 text-xs font-bold uppercase hover:bg-black/5"
+                    :class="{
+                        'text-monday': currentLocale === locale,
+                    }"
                     :key="locale"
                     :href="route('locale.set', locale)"
                     >{{ locale }}
