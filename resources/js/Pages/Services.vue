@@ -117,7 +117,7 @@ const services = {
         <AppContainer>
             <div class="grid gap-y-6 md:grid-cols-2 md:gap-x-8">
                 <div v-for="key in Object.keys(services)" :key="key" class="space-y-4">
-                    <template v-for="service in services[key]" :key="index">
+                    <template v-for="service in services[key]" :key="service.title">
                         <AppCollapse :icon="service.icon" :title="service.title">
                             <div class="text-sm">
                                 <h2 class="mb-2 font-semibold">

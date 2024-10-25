@@ -1,9 +1,11 @@
 <script setup>
-import { ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 import CarouselEntry from './CarouselEntry.vue';
 import { useTrans } from '@/composables/trans';
 
+let timer = null;
 const currentStep = ref(0);
+const duration = 5000;
 
 const carouselEntries = [
     {
@@ -39,38 +41,53 @@ const carouselEntries = [
 ];
 
 const goTo = (index) => {
+    // Check if we go over
+    if (index > carouselEntries.length - 1) {
+        currentStep.value = 0;
+        return;
+    }
+
+    // Check if we go under
+    if (index < 0) {
+        currentStep.value = carouselEntries.length - 1;
+        return;
+    }
+
     currentStep.value = index;
 };
+
+const next = () => {
+    goTo(currentStep.value + 1);
+}
+
+onMounted(() => {
+    clearInterval(timer);
+
+    timer = setInterval(() => {
+        next();
+    }, duration);
+});
+
+onUnmounted(() => {
+    clearInterval(timer);
+});
 </script>
 
 <template>
     <div class="relative overflow-hidden">
-        <div
-            class="relative flex min-h-[240px] flex-nowrap transition-all duration-700"
-            :style="{
-                transform: `translateX(-${currentStep * 100}%)`,
-            }"
-        >
-            <CarouselEntry
-                v-for="(entry, index) in carouselEntries"
-                :key="index"
-                :image-url="entry.imageUrl"
-                :title="entry.title"
-                :link="entry.link"
-            />
+        <div class="relative flex min-h-[240px] flex-nowrap transition-all duration-700" :style="{
+            transform: `translateX(-${currentStep * 100}%)`,
+        }">
+            <CarouselEntry v-for="(entry, index) in carouselEntries" :key="index" :image-url="entry.imageUrl"
+                :title="entry.title" :link="entry.link" />
         </div>
 
         <div class="absolute bottom-2 left-1/2 flex -translate-x-1/2 space-x-2">
-            <div
-                v-for="(entry, index) in carouselEntries"
-                :key="index"
-                class="size-3 cursor-pointer rounded-full backdrop-blur transition-all"
-                :class="{
+            <div v-for="(entry, index) in carouselEntries" :key="index"
+                class="size-3 cursor-pointer rounded-full backdrop-blur transition-all" :class="{
                     'bg-black': index === currentStep,
                     'bg-black/40 hover:bg-monday': index !== currentStep,
-                }"
-                @click="goTo(index)"
-            ></div>
+                }" @click="goTo(index)"></div>
         </div>
     </div>
 </template>
