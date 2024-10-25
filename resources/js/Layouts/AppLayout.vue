@@ -4,7 +4,9 @@ import AppHeader from '@/Components/AppHeader.vue';
 import StockTransferBanner from '@/Components/StockTransferBanner.vue';
 import LocaleSwitcher from '@/Components/LocaleSwitcher.vue';
 import TransferNotice from '@/Components/TransferNotice.vue';
+import SupportPopup from '@/Components/SupportPopup.vue';
 import { Head } from '@inertiajs/vue3';
+import GoToTopButton from '@/Components/GoToTopButton.vue';
 
 defineProps({
     title: {
@@ -23,6 +25,8 @@ defineProps({
 
     <StockTransferBanner v-if="!hideAlert" />
     <LocaleSwitcher />
+    <SupportPopup />
+    <GoToTopButton />
 
     <div class="flex min-h-svh flex-col">
         <AppHeader />

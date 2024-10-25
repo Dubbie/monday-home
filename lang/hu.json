@@ -1,7 +1,7 @@
 {
     "company_name": "Monday Insurance Brokers Kft.",
     "alert": {
-        "title": "Állomány-Átruházás!",
+        "title": "Állomány-átruházás!",
         "description": "Tekintse meg az állomány-átruházás részletes tájékoztatóját."
     },
     "ui": {
