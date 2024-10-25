@@ -116,48 +116,27 @@ const services = {
     <AppLayout>
         <AppContainer>
             <div class="grid gap-y-6 md:grid-cols-2 md:gap-x-8">
-                <div
-                    v-for="key in Object.keys(services)"
-                    :key="key"
-                    class="space-y-4"
-                >
-                    <template
-                        v-for="(service, index) in services[key]"
-                        :key="index"
-                    >
-                        <AppCollapse
-                            :icon="service.icon"
-                            :title="service.title"
-                        >
-                            <h2 class="mb-2 font-semibold">
-                                {{ service.headline }}
-                            </h2>
-                            <p
-                                class="mb-2"
-                                v-for="(desc, index) in service.description"
-                                :key="index"
-                            >
-                                {{ desc }}
-                            </p>
-                            <ul class="ml-4">
-                                <li
-                                    v-for="(item, itemIndex) in service.items"
-                                    :key="itemIndex"
-                                    class="flex gap-x-2"
-                                >
-                                    <ArrowRightIcon
-                                        class="mt-1 size-4 shrink-0 text-monday"
-                                    />
-                                    <span>{{ item }}</span>
-                                </li>
-                            </ul>
-                            <p
-                                class="mt-2"
-                                v-for="(desc, index) in service.footer"
-                                :key="index"
-                            >
-                                {{ desc }}
-                            </p>
+                <div v-for="key in Object.keys(services)" :key="key" class="space-y-4">
+                    <template v-for="service in services[key]" :key="index">
+                        <AppCollapse :icon="service.icon" :title="service.title">
+                            <div class="text-sm">
+                                <h2 class="mb-2 font-semibold">
+                                    {{ service.headline }}
+                                </h2>
+                                <p class="mb-2" v-for="(desc, index) in service.description" :key="index">
+                                    {{ desc }}
+                                </p>
+                                <ul class="ml-4">
+                                    <li v-for="(item, itemIndex) in service.items" :key="itemIndex"
+                                        class="flex gap-x-2">
+                                        <ArrowRightIcon class="mt-1 size-4 shrink-0 text-monday" />
+                                        <span>{{ item }}</span>
+                                    </li>
+                                </ul>
+                                <p class="mt-2" v-for="(desc, index) in service.footer" :key="index">
+                                    {{ desc }}
+                                </p>
+                            </div>
                         </AppCollapse>
                     </template>
                 </div>

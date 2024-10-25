@@ -34,7 +34,7 @@ const classMap = {
     primary: {
         default: 'bg-zinc-800 text-white font-semibold hover:bg-zinc-900',
         blue: 'bg-blue-500 text-white font-semibold hover:bg-blue-400',
-        green: 'bg-green-500 text-white font-semibold hover:bg-green-400',
+        green: 'bg-monday text-white font-semibold hover:bg-green-500',
         white: 'bg-white text-zinc-800 font-semibold hover:bg-zinc-100',
     },
     default: {
@@ -64,13 +64,9 @@ const sizeClasses = computed(() => {
 </script>
 
 <template>
-    <component
-        :is="href ? Link : 'button'"
-        :href="href"
+    <component :is="href ? Link : 'button'" :href="href"
         class="inline-flex items-center justify-center gap-x-2 rounded-md text-sm ring-inset"
-        :class="[colorClasses, sizeClasses]"
-        :type="type"
-    >
+        :class="[colorClasses, sizeClasses]" :type="type">
         <slot />
     </component>
 </template>

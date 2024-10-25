@@ -17,7 +17,7 @@ export default {
                 monday: '#3baa34',
             },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
             },
             maxWidth: {
                 monday: '1024px',
