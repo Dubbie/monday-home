@@ -20,7 +20,11 @@ import AppTab from '@/Components/AppTab.vue';
             :href="route('insurance.cargo')"
             :active="route().current('insurance.cargo')"
         />
-        <AppTab label="Élet- és Balesetbiztosítások" />
+        <AppTab
+            label="Élet- és Balesetbiztosítások"
+            :href="route('insurance.life')"
+            :active="route().current('insurance.life')"
+        />
         <AppTab label="Felelősségbiztosítás" />
     </TabContainer>
 </template>

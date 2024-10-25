@@ -201,6 +201,9 @@ return [
         'inventory_insurance' => 'Árukészlet biztosítás',
         'architect_installation_insurance' => 'Építész-szerelés biztosítás',
         'shipping_area' => 'Szállítmányozási terület',
+        'accident_insurance' => 'Balesetbiztosítás',
+        'life_insurance' => 'Életbiztosítás',
+        'health_insurance' => 'Egészségbiztosítás',
         'message' => 'Üzenet'
     ],
 

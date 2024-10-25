@@ -45,4 +45,9 @@ class PageController extends Controller
     {
         return Inertia::render('CargoInsurance');
     }
+
+    public function lifeInsurance()
+    {
+        return Inertia::render('LifeInsurance');
+    }
 }
