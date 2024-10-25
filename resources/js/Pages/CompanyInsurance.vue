@@ -2,14 +2,104 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import AppContainer from '@/Components/AppContainer.vue';
 import CompanyInsuranceTabs from '@/Components/CompanyInsuranceTabs.vue';
+import CompanyInsuranceDescription from '@/Pages/Partials/CompanyInsuranceDescription.vue';
+import InsuranceQuoteForm from '@/Components/InsuranceQuoteForm.vue';
+import { useFormHandler } from '@/composables/formHandler';
+import { ref } from 'vue';
+import QuoteSentModal from '@/Components/QuoteSentModal.vue';
+
+const loading = ref(false);
+const showSuccessModal = ref(false);
+const { form, updateFormData } = useFormHandler({
+    company_name: '',
+    email: '',
+    phone: '',
+    professional_activity: '',
+    message: '',
+});
+
+const fields = [
+    { label: 'Cégnév', type: 'text', modelKey: 'company_name' },
+    { label: 'E-mail cím', type: 'email', modelKey: 'email' },
+    { label: 'Telefonszám', type: 'tel', modelKey: 'phone' },
+    {
+        label: 'Szakmai tevékenység',
+        type: 'text',
+        modelKey: 'professional_activity',
+    },
+    { label: 'Rövid üzenet', type: 'textarea', modelKey: 'message' },
+];
+
+const handleValidationErrors = (errors) => {
+    for (const key of Object.keys(errors)) {
+        // form.errors[key] = errors[key][0];
+        form.setError(key, errors[key][0]);
+    }
+};
+
+const handleClearError = (key) => {
+    form.clearErrors(key);
+};
+
+const handleSubmit = async () => {
+    loading.value = true;
+    showSuccessModal.value = false;
+
+    try {
+        const response = await axios.post(
+            route('api.quote.company'),
+            form.data(),
+        );
+
+        if (response.data.success) {
+            showSuccessModal.value = true;
+            form.reset();
+        }
+    } catch (err) {
+        if (err?.response?.status === 422) {
+            handleValidationErrors(err.response.data.errors);
+        } else {
+            console.log('Error when sending request!');
+            console.log(err);
+        }
+    } finally {
+        loading.value = false;
+    }
+};
 </script>
 
 <template>
-    <AppLayout>
+    <AppLayout title="Szakmai Felelősségbiztosítás">
         <AppContainer>
             <CompanyInsuranceTabs />
 
-            <p>Cégbizti</p>
+            <div class="mt-6">
+                <img src="/img/SzakmaiFelelosseg.jpg" alt="" />
+            </div>
+
+            <div class="mt-3 grid grid-cols-7 gap-x-12">
+                <div class="col-span-4">
+                    <CompanyInsuranceDescription />
+                </div>
+
+                <div class="col-span-3">
+                    <InsuranceQuoteForm
+                        class="-mt-16"
+                        :fields="fields"
+                        :errors="{ ...form.errors }"
+                        :loading="loading"
+                        :model-value="form.data()"
+                        @update:model-value="updateFormData"
+                        @submit="handleSubmit"
+                        @clear-error="handleClearError"
+                    />
+                </div>
+            </div>
         </AppContainer>
+
+        <QuoteSentModal
+            :show="showSuccessModal"
+            @close="showSuccessModal = false"
+        />
     </AppLayout>
 </template>

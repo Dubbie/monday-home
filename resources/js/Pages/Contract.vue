@@ -7,7 +7,7 @@ import { useTrans } from '@/composables/trans.js';
 </script>
 
 <template>
-    <AppLayout>
+    <AppLayout :title="useTrans('header.appointment')">
         <AppContainer>
             <div class="grid grid-cols-12">
                 <div class="col-span-9">

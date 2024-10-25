@@ -22,6 +22,14 @@ const props = defineProps({
         type: String,
         default: 'md',
     },
+    disabled: {
+        type: Boolean,
+        default: false,
+    },
+    disabledLabel: {
+        type: String,
+        default: 'Processing...',
+    },
 });
 
 // Define class mappings for different variants and colors
@@ -30,6 +38,7 @@ const classMap = {
         default: 'bg-transparent text-black font-medium hover:bg-black/5',
         blue: 'bg-transparent text-blue-500 font-medium hover:bg-blue-500/10',
         green: 'bg-transparent text-green-500 font-medium hover:bg-green-500/10',
+        white: 'bg-transparent text-white font-medium hover:bg-white/10',
     },
     primary: {
         default: 'bg-zinc-800 text-white font-semibold hover:bg-zinc-900',
@@ -64,9 +73,24 @@ const sizeClasses = computed(() => {
 </script>
 
 <template>
-    <component :is="href ? Link : 'button'" :href="href"
+    <component
+        :is="href ? Link : 'button'"
+        :href="href"
         class="inline-flex items-center justify-center gap-x-2 rounded-md text-sm ring-inset"
-        :class="[colorClasses, sizeClasses]" :type="type">
-        <slot />
+        :class="[
+            {
+                'pointer-events-none opacity-50': disabled,
+            },
+            colorClasses,
+            sizeClasses,
+        ]"
+        :type="type"
+    >
+        <template v-if="!disabled">
+            <slot />
+        </template>
+        <template v-else>
+            <span>{{ disabledLabel }}</span>
+        </template>
     </component>
 </template>

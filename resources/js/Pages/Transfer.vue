@@ -4,7 +4,7 @@ import AppContainer from '@/Components/AppContainer.vue';
 </script>
 
 <template>
-    <AppLayout hide-alert>
+    <AppLayout title="Állomány átruházás" hide-alert>
         <AppContainer>
             <div class="prose text-justify">
                 <h5>Tisztelt Ügyfeleink!</h5>

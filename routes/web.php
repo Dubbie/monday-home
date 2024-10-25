@@ -13,5 +13,7 @@ Route::get('/transfer', [PageController::class, 'transfer'])->name('transfer');
 Route::get('/insurance/company', [PageController::class, 'companyInsurance'])->name('insurance.company');
 Route::get('/insurance/property-and-liability', [PageController::class, 'propertyAndLiability'])->name('insurance.property-and-liability');
 
+Route::get('/quote/sent/{type}', [PageController::class, 'quoteSent'])->name('quote.sent');
+
 
 Route::get('/locale/{locale}', [LocaleController::class, 'update'])->name('locale.set');

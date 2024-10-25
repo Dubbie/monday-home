@@ -49,7 +49,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <AppLayout>
+    <AppLayout :title="useTrans('header.contact')">
         <div id="map" class="h-[600px] w-full"></div>
 
         <AppContainer>

@@ -136,4 +136,6 @@ return [
     */
 
     'available_locales' => ['en', 'hu'],
+
+    'recipient' => env('QUOTE_RECIPIENT', 'miho.daniel@damarisk.hu')
 ];
