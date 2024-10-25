@@ -84,7 +84,9 @@ watch(
                 </div>
             </div>
 
-            <div class="mt-3 flex space-x-1">
+            <div
+                class="mt-3 flex flex-col space-y-1 sm:flex-row sm:space-x-1 sm:space-y-0"
+            >
                 <AppButton
                     type="submit"
                     variant="primary"
