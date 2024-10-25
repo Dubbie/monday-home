@@ -54,18 +54,24 @@ const goTo = (index) => {
     }
 
     currentStep.value = index;
+
+    initAutoStepping();
 };
 
 const next = () => {
     goTo(currentStep.value + 1);
-}
+};
 
-onMounted(() => {
+const initAutoStepping = () => {
     clearInterval(timer);
 
     timer = setInterval(() => {
         next();
     }, duration);
+};
+
+onMounted(() => {
+    initAutoStepping();
 });
 
 onUnmounted(() => {
@@ -75,19 +81,32 @@ onUnmounted(() => {
 
 <template>
     <div class="relative overflow-hidden">
-        <div class="relative flex min-h-[240px] flex-nowrap transition-all duration-700" :style="{
-            transform: `translateX(-${currentStep * 100}%)`,
-        }">
-            <CarouselEntry v-for="(entry, index) in carouselEntries" :key="index" :image-url="entry.imageUrl"
-                :title="entry.title" :link="entry.link" />
+        <div
+            class="relative flex min-h-[240px] flex-nowrap transition-all duration-700"
+            :style="{
+                transform: `translateX(-${currentStep * 100}%)`,
+            }"
+        >
+            <CarouselEntry
+                v-for="(entry, index) in carouselEntries"
+                :key="index"
+                :image-url="entry.imageUrl"
+                :title="entry.title"
+                :link="entry.link"
+            />
         </div>
 
         <div class="absolute bottom-2 left-1/2 flex -translate-x-1/2 space-x-2">
-            <div v-for="(entry, index) in carouselEntries" :key="index"
-                class="size-3 cursor-pointer rounded-full backdrop-blur transition-all" :class="{
+            <div
+                v-for="(entry, index) in carouselEntries"
+                :key="index"
+                class="size-3 cursor-pointer rounded-full backdrop-blur transition-all"
+                :class="{
                     'bg-black': index === currentStep,
                     'bg-black/40 hover:bg-monday': index !== currentStep,
-                }" @click="goTo(index)"></div>
+                }"
+                @click="goTo(index)"
+            ></div>
         </div>
     </div>
 </template>
