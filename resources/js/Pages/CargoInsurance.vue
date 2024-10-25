@@ -79,7 +79,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-    <AppLayout title="Szakmai Felelősségbiztosítás">
+    <AppLayout title="Szállítmánybiztosítás">
         <AppContainer>
             <CompanyInsuranceTabs />
 
