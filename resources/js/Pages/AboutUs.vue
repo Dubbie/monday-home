@@ -5,7 +5,7 @@ import { useTrans } from '@/composables/trans';
 import AppLayout from '@/Layouts/AppLayout.vue';
 
 const titleClasses = 'text-xl font-bold mb-2';
-const pClasses = 'text-zinc-500';
+const pClasses = 'text-zinc-500 text-justify';
 </script>
 
 <template>
