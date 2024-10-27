@@ -18,7 +18,7 @@ class RedirectOldUrls
         $newRoute = $this->resolveRedirect($request->path());
 
         if ($newRoute) {
-            return redirect(route($newRoute), Response::HTTP_PERMANENTLY_REDIRECT);
+            return redirect(route($newRoute), Response::HTTP_MOVED_PERMANENTLY);
         }
 
         return $next($request);
