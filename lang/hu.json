@@ -6,7 +6,16 @@
         "description": "Tekintse meg az állomány-átruházás részletes tájékoztatóját."
     },
     "ui": {
-        "learn_more": "Tovább"
+        "learn_more": "Tovább",
+        "back": "Vissza",
+        "home": "Megnézem a főoldalt"
+    },
+    "error": {
+        "404": {
+            "title": "Az oldal nem található",
+            "subtitle": "Az oldal amit keresel nem létezik.",
+            "links": "Néhány hasznos link:"
+        }
     },
     "header": {
         "about_us": "Rólunk",

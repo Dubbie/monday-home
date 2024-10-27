@@ -23,3 +23,5 @@ Route::get('/quote/sent/{type}', [PageController::class, 'quoteSent'])->name('qu
 
 
 Route::get('/locale/{locale}', [LocaleController::class, 'update'])->name('locale.set');
+
+Route::fallback([PageController::class, 'fallback']);

@@ -12,7 +12,9 @@ class SetLocale
     /**
      * Handle an incoming request.
      *
+     * @param  \Illuminate\Http\Request  $request
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function handle(Request $request, Closure $next): Response
     {
@@ -22,7 +24,7 @@ class SetLocale
         // Set the locale for the app
         App::setLocale($locale);
 
-
+        // Call the next middleware in the stack and return the response
         return $next($request);
     }
 }

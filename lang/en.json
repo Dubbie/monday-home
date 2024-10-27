@@ -6,7 +6,16 @@
         "description": "Read more about the details of the stock transfer."
     },
     "ui": {
-        "learn_more": "Learn More"
+        "learn_more": "Learn More",
+        "back": "Go back",
+        "home": "Take me home"
+    },
+    "error": {
+        "404": {
+            "title": "Page not found",
+            "subtitle": "The page you are looking for doesn't exist.",
+            "links": "Here are some helpful links:"
+        }
     },
     "header": {
         "about_us": "About us",

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class PageController extends Controller
@@ -64,5 +65,10 @@ class PageController extends Controller
     public function agricultureInsurance()
     {
         return Inertia::render('Insurance/Agriculture');
+    }
+
+    public function fallback(Request $request)
+    {
+        return Inertia::render('Error', []);
     }
 }
