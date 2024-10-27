@@ -7,21 +7,30 @@ import TransferNotice from '@/Components/TransferNotice.vue';
 import SupportPopup from '@/Components/SupportPopup.vue';
 import { Head } from '@inertiajs/vue3';
 import GoToTopButton from '@/Components/GoToTopButton.vue';
+import { computed } from 'vue';
+import { useTrans } from '@/composables/trans';
 
-defineProps({
-    title: {
-        type: String,
-        default: 'Biztosítás és Hitel',
-    },
+const props = defineProps({
+    title: String,
     hideAlert: {
         type: Boolean,
         default: false,
     },
 });
+
+const fullTitle = computed(() => {
+    const suffix = useTrans('title');
+
+    if (props.title) {
+        return `${props.title} - ${suffix}`;
+    }
+
+    return suffix;
+});
 </script>
 
 <template>
-    <Head :title="title" />
+    <Head :title="fullTitle" />
 
     <StockTransferBanner v-if="!hideAlert" />
     <LocaleSwitcher />

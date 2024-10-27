@@ -73,7 +73,7 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-    <AppLayout title="Társasház Biztosítás">
+    <AppLayout title="Mezőgazdasági Biztosítás">
         <AppContainer>
             <img
                 src="/img/Agriculture.jpg"
