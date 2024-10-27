@@ -10,6 +10,7 @@ Route::get('/contact', [PageController::class, 'contact'])->name('contact-us');
 Route::get('/contract', [PageController::class, 'contract'])->name('contract');
 Route::get('/transfer', [PageController::class, 'transfer'])->name('transfer');
 Route::get('/complaints', [PageController::class, 'complaints'])->name('complaints');
+Route::get('/mnb', [PageController::class, 'mnb'])->name('mnb');
 
 Route::get('/insurance/company', [PageController::class, 'companyInsurance'])->name('insurance.company');
 Route::get('/insurance/property-and-liability', [PageController::class, 'propertyAndLiability'])->name('insurance.property-and-liability');

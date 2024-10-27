@@ -72,6 +72,11 @@ class PageController extends Controller
         return Inertia::render('Complaints');
     }
 
+    public function mnb()
+    {
+        return Inertia::render('MnbNavigator');
+    }
+
     public function fallback()
     {
         return Inertia::render('Error');

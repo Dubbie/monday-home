@@ -110,17 +110,17 @@ const titleClasses = 'font-semibold text-white mb-3';
                         <FooterLink
                             :icon="LockClosedIcon"
                             :label="useTrans('footer.links.partners')"
-                            href="#!"
+                            href="https://igenyfelmero.rendelesem.hu"
                         />
                         <FooterLink
                             :icon="LockClosedIcon"
                             :label="useTrans('footer.links.fbamsz')"
-                            href="#!"
+                            href="https://fbamsz.hu/wp-content/uploads/2022/02/Etikai-kodex.pdf"
                         />
                         <FooterLink
                             :icon="LockClosedIcon"
                             :label="useTrans('footer.links.mnb')"
-                            href="#!"
+                            :href="route('mnb')"
                         />
                     </div>
                 </div>
