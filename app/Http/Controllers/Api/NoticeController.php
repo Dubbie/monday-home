@@ -3,16 +3,14 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 
 class NoticeController extends Controller
 {
-    public function read(Request $request)
+    public function read()
     {
-        $request->session()->put('notice_read', true);
-
         return response()->json([
             'message' => 'Elolvasva'
-        ]);
+        ])->withCookie(Cookie::make('notice_read', true, 60 * 24 * 30));
     }
 }

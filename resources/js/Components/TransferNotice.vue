@@ -5,6 +5,8 @@ import { XMarkIcon } from '@heroicons/vue/24/outline';
 
 import { ref } from 'vue';
 
+console.log(usePage().props.notice_read);
+
 const isOpen = ref(!usePage().props.notice_read);
 
 const handleNoticeRead = async () => {

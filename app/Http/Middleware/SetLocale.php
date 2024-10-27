@@ -18,8 +18,14 @@ class SetLocale
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Get the locale from the session
-        $locale = $request->session()->get('locale', config('app.fallback_locale'));
+        $locale = '';
+        if ($request->is('api/*')) {
+            // Get the locale from the header
+            $locale = $request->header('Accept-Language', config('app.fallback_locale'));
+        } else {
+            // Get the locale from the session
+            $locale = $request->session()->get('locale', config('app.fallback_locale'));
+        }
 
         // Set the locale for the app
         App::setLocale($locale);

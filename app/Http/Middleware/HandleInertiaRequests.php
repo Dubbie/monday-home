@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\File;
 use Inertia\Middleware;
 
@@ -41,7 +42,7 @@ class HandleInertiaRequests extends Middleware
             'locale' => App::currentLocale(),
             'locales' => config('app.available_locales'),
             'translations' => File::exists($translationFile) ? File::json($translationFile) : [],
-            'notice_read' => fn() => $request->session()->get('notice_read', false)
+            'notice_read' => Cookie::get('notice_read')
         ];
     }
 }

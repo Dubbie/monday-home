@@ -23,7 +23,6 @@ Route::get('/insurance/agriculture', [PageController::class, 'agricultureInsuran
 
 Route::get('/quote/sent/{type}', [PageController::class, 'quoteSent'])->name('quote.sent');
 
-
 Route::get('/locale/{locale}', [LocaleController::class, 'update'])->name('locale.set');
 
 Route::fallback([PageController::class, 'fallback']);

@@ -21,8 +21,12 @@ return Application::configure(basePath: dirname(__DIR__))
 
         $middleware->api(append: [
             \App\Http\Middleware\SetLocale::class,
-            \Laravel\Sanctum\Http\Middleware\EnsureFrontendRequestsAreStateful::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        ]);
+
+        $middleware->encryptCookies(except: [
+            'notice_read',
+            'locale'
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {})->create();
