@@ -9,7 +9,7 @@ import { ref, watch } from 'vue';
 import { EnvelopeIcon } from '@heroicons/vue/24/outline';
 import SelectInput from './SelectInput.vue';
 
-const textInputTypes = ['text', 'tel', 'email'];
+const textInputTypes = ['text', 'tel', 'email', 'number'];
 
 const props = defineProps({
     fields: Array, // Field configurations (label, type, modelKey)
@@ -68,6 +68,7 @@ watch(
                         :id="field.modelKey"
                         v-model="formData[field.modelKey]"
                         class="w-full text-sm"
+                        :min="field.type === 'number' ? 0 : null"
                         @keyup="$emit('clearError', field.modelKey)"
                     />
 

@@ -15,6 +15,7 @@ class QuoteService
     public const CARGO_INSURANCE = 'cargo';
     public const LIFE_INSURANCE = 'life';
     public const LIABILITY_INSURANCE = 'liability';
+    public const CONDOMINIUM_INSURANCE = 'condominium';
 
     /**
      * Handles the new quote submission.
@@ -73,6 +74,8 @@ class QuoteService
                 return 'Élet- és Balesetbiztosítások';
             case self::LIABILITY_INSURANCE:
                 return 'Felelősségbiztosítás';
+            case self::CONDOMINIUM_INSURANCE:
+                return 'Társasház Biztosítás';
             default:
                 return $insuranceType . '(Ismeretlen)';
         }

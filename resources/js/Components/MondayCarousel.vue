@@ -31,7 +31,7 @@ const carouselEntries = [
     {
         imageUrl: '/img/5.jpg',
         title: useTrans('header.condominium_insurance'),
-        link: route('contact-us'),
+        link: route('insurance.condominium'),
     },
     {
         imageUrl: '/img/6.jpg',

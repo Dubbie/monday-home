@@ -205,6 +205,9 @@ return [
         'life_insurance' => 'Életbiztosítás',
         'health_insurance' => 'Egészségbiztosítás',
         'investment_cost' => 'Projektenkénti beruházási költség',
+        'sub_deposit_count' => 'Albetétek száma',
+        'zip_code' => 'Irányítószám',
+        'intercom_count' => 'Kaputelefonok száma',
         'message' => 'Üzenet'
     ],
 

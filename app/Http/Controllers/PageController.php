@@ -56,7 +56,7 @@ class PageController extends Controller
         return Inertia::render('Insurance/Liability');
     }
 
-    public function condominiumInusrance()
+    public function condominiumInsurance()
     {
         return Inertia::render('Insurance/Condominium');
     }
