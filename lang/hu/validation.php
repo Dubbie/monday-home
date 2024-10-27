@@ -208,6 +208,9 @@ return [
         'sub_deposit_count' => 'Albetétek száma',
         'zip_code' => 'Irányítószám',
         'intercom_count' => 'Kaputelefonok száma',
+        'area' => 'Terület (ha)',
+        'yield' => 'Hozam (t/ha)',
+        'price_per_unit' => 'Egységár (Ft/t)',
         'message' => 'Üzenet'
     ],
 

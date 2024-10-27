@@ -36,7 +36,7 @@ const carouselEntries = [
     {
         imageUrl: '/img/6.jpg',
         title: useTrans('header.agricultural_insurance'),
-        link: route('contact-us'),
+        link: route('insurance.agriculture'),
     },
 ];
 

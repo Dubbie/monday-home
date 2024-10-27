@@ -16,6 +16,7 @@ class QuoteService
     public const LIFE_INSURANCE = 'life';
     public const LIABILITY_INSURANCE = 'liability';
     public const CONDOMINIUM_INSURANCE = 'condominium';
+    public const AGRICULTURAL_INSURANCE = 'agricultural';
 
     /**
      * Handles the new quote submission.
@@ -76,6 +77,8 @@ class QuoteService
                 return 'Felelősségbiztosítás';
             case self::CONDOMINIUM_INSURANCE:
                 return 'Társasház Biztosítás';
+            case self::AGRICULTURAL_INSURANCE:
+                return 'Mezőgazdasági Biztosítás';
             default:
                 return $insuranceType . '(Ismeretlen)';
         }

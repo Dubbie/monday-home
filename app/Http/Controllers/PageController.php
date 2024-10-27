@@ -60,4 +60,9 @@ class PageController extends Controller
     {
         return Inertia::render('Insurance/Condominium');
     }
+
+    public function agricultureInsurance()
+    {
+        return Inertia::render('Insurance/Agriculture');
+    }
 }

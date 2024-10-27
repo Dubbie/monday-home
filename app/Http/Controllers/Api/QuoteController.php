@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AgricultureInsuranceQuoteRequest;
 use App\Http\Requests\CargoInsuranceQuoteRequest;
 use App\Http\Requests\CompanyInsuranceQuoteRequest;
 use App\Http\Requests\CondominiumInsuranceQuoteRequest;
@@ -53,5 +54,12 @@ class QuoteController extends Controller
         $data = $request->validated();
 
         return QuoteService::handleNewQuoteSubmission(QuoteService::LIABILITY_INSURANCE, $data);
+    }
+
+    public function sendAgricultureInsuranceQuote(AgricultureInsuranceQuoteRequest $request)
+    {
+        $data = $request->validated();
+
+        return QuoteService::handleNewQuoteSubmission(QuoteService::AGRICULTURAL_INSURANCE, $data);
     }
 }
