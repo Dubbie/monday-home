@@ -33,26 +33,31 @@ class PageController extends Controller
 
     public function companyInsurance()
     {
-        return Inertia::render('CompanyInsurance');
+        return Inertia::render('Insurance/Company');
     }
 
     public function propertyAndLiability()
     {
-        return Inertia::render('PropertyAndLiability');
+        return Inertia::render('Insurance/PropertyAndLiability');
     }
 
     public function cargoInsurance()
     {
-        return Inertia::render('CargoInsurance');
+        return Inertia::render('Insurance/Cargo');
     }
 
     public function lifeInsurance()
     {
-        return Inertia::render('LifeInsurance');
+        return Inertia::render('Insurance/Life');
     }
 
     public function liabilityInsurance()
     {
-        return Inertia::render('LiabilityInsurance');
+        return Inertia::render('Insurance/Liability');
+    }
+
+    public function condominiumInusrance()
+    {
+        return Inertia::render('Insurance/Condominium');
     }
 }
