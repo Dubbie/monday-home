@@ -4,7 +4,7 @@ import AppContainer from '@/Components/AppContainer.vue';
 import { onMounted } from 'vue';
 import { useTrans } from '@/composables/trans';
 import ContactSection from '@/Components/ContactSection.vue';
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/vue/24/outline';
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/vue/20/solid';
 import L from 'leaflet';
 
 const mapSettings = {
