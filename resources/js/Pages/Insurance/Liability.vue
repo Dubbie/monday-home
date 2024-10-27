@@ -6,7 +6,7 @@ import InsuranceQuoteForm from '@/Components/InsuranceQuoteForm.vue';
 import QuoteSentModal from '@/Components/QuoteSentModal.vue';
 import { ref } from 'vue';
 import { useFormHandler } from '@/composables/formHandler';
-import LiabilityInsuranceDescription from '@/Pages/Partials/LiabilityInsuranceDescription.vue';
+import LiabilityInsuranceDescription from '@/Pages/Insurance/Partials/LiabilityInsuranceDescription.vue';
 
 // State variables
 const loading = ref(false);

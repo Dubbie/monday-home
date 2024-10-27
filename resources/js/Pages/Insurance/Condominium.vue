@@ -80,14 +80,10 @@ const handleSubmit = async () => {
 <template>
     <AppLayout title="Társasház Biztosítás">
         <AppContainer>
-            <CompanyInsuranceTabs />
-
-            <div class="mt-6">
-                <img
-                    src="/img/Apartment.jpg"
-                    alt="Társasház biztosítás ábrázolás"
-                />
-            </div>
+            <img
+                src="/img/Apartment.jpg"
+                alt="Társasház biztosítás ábrázolás"
+            />
 
             <div class="mt-3 grid grid-cols-7 gap-y-6 lg:gap-x-12 lg:gap-y-0">
                 <div class="col-span-7 lg:col-span-3">

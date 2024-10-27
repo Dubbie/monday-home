@@ -2,7 +2,7 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import AppContainer from '@/Components/AppContainer.vue';
 import CompanyInsuranceTabs from '@/Components/CompanyInsuranceTabs.vue';
-import CompanyInsuranceDescription from '@/Pages/Partials/CompanyInsuranceDescription.vue';
+import CompanyInsuranceDescription from '@/Pages/Insurance/Partials/CompanyInsuranceDescription.vue';
 import InsuranceQuoteForm from '@/Components/InsuranceQuoteForm.vue';
 import QuoteSentModal from '@/Components/QuoteSentModal.vue';
 import { ref } from 'vue';
