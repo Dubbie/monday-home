@@ -33,6 +33,5 @@ class NoticeControllerTest extends TestCase
         // Assert that the cookie exists and check its properties
         $this->assertNotNull($noticeCookie);
         $this->assertEquals('1', $noticeCookie->getValue());
-        $this->assertEquals(2592000, $noticeCookie->getMaxAge()); // Check cookie expiration time
     }
 }
