@@ -72,31 +72,31 @@ const titleClasses = 'font-semibold text-white mb-3';
                         <FooterLink
                             :icon="CheckIcon"
                             :label="useTrans('footer.regulations.services')"
-                            href="#!"
+                            href="/monday-szolgaltatasi-szabalyzat.pdf"
                         />
                         <FooterLink
                             :icon="CheckIcon"
                             :label="useTrans('footer.regulations.complaints')"
-                            href="#!"
+                            :href="route('complaints')"
                         />
                         <FooterLink
                             :icon="CheckIcon"
                             :label="
                                 useTrans('footer.regulations.privacy_policy')
                             "
-                            href="#!"
+                            href="/adatvedelmi_szabalyzat_20200520.pdf"
                         />
                         <FooterLink
                             :icon="CheckIcon"
                             :label="
                                 useTrans('footer.regulations.sustainability')
                             "
-                            href="#!"
+                            href="/Fenntarthatosagi-tajekoztato.pdf"
                         />
                         <FooterLink
                             :icon="CheckIcon"
                             :label="useTrans('footer.regulations.report')"
-                            href="#!"
+                            href="https://www.reklamacio.eu/"
                         />
                     </div>
                 </div>

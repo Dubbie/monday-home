@@ -67,8 +67,13 @@ class PageController extends Controller
         return Inertia::render('Insurance/Agriculture');
     }
 
-    public function fallback(Request $request)
+    public function complaints()
     {
-        return Inertia::render('Error', []);
+        return Inertia::render('Complaints');
+    }
+
+    public function fallback()
+    {
+        return Inertia::render('Error');
     }
 }
