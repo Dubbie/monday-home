@@ -3,8 +3,8 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import AppContainer from '@/Components/AppContainer.vue';
 import { onMounted } from 'vue';
 import { useTrans } from '@/composables/trans';
-
-import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/vue/24/solid';
+import ContactSection from '@/Components/ContactSection.vue';
+import { EnvelopeIcon, MapPinIcon, PhoneIcon } from '@heroicons/vue/24/outline';
 import L from 'leaflet';
 
 const mapSettings = {
@@ -50,47 +50,47 @@ onMounted(() => {
 
 <template>
     <AppLayout :title="useTrans('header.contact')">
-        <div id="map" class="h-[600px] w-full"></div>
-
         <AppContainer>
-            <div class="mt-6 grid grid-cols-2 gap-x-8">
+            <div id="map" class="h-[400px] w-full rounded-xl"></div>
+
+            <div
+                class="my-12 grid gap-y-8 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-0"
+            >
                 <div>
-                    <h2 class="text-lg font-semibold">
-                        <MapPinIcon
-                            class="mr-1 inline-block size-6 flex-shrink-0 text-black"
-                        />
-
-                        <span>{{ useTrans('company_name') }}</span>
-                    </h2>
-                    <p class="text-sm">
-                        <span
-                            >{{ useTrans('footer.headquarters.label') }}:
-                            {{ useTrans('footer.headquarters.address') }}
-                        </span>
-                    </p>
-                    <p class="text-sm">
-                        {{ useTrans('footer.office.label') }}:
-                        {{ useTrans('footer.office.address') }}
-                    </p>
-                    <p class="text-sm">
-                        {{ useTrans('footer.po_box.label') }}:
-                        {{ useTrans('footer.po_box.address') }}
-                    </p>
+                    <ContactSection
+                        :icon="EnvelopeIcon"
+                        :title="useTrans('footer.email.label')"
+                        :subtitle="useTrans('footer.email.subtitle')"
+                    >
+                        <template #content>
+                            <a
+                                :href="`mailto:${useTrans('footer.email.address')}`"
+                                >{{ useTrans('footer.email.address') }}</a
+                            >
+                        </template>
+                    </ContactSection>
                 </div>
-
-                <div class="">
-                    <p>
-                        <PhoneIcon
-                            class="mr-1 inline-block size-4 flex-shrink-0 text-black"
-                        />
-                        <span>{{ useTrans('footer.phone') }}</span>
-                    </p>
-                    <p>
-                        <EnvelopeIcon
-                            class="mr-1 inline-block size-4 flex-shrink-0 text-black"
-                        />
-                        <span>{{ useTrans('footer.email') }}</span>
-                    </p>
+                <div>
+                    <ContactSection
+                        :icon="MapPinIcon"
+                        :title="useTrans('footer.office.label')"
+                        :subtitle="useTrans('footer.office.subtitle')"
+                    >
+                        <template #content>
+                            <p>{{ useTrans('footer.office.address') }}</p>
+                        </template>
+                    </ContactSection>
+                </div>
+                <div>
+                    <ContactSection
+                        :icon="PhoneIcon"
+                        :title="useTrans('footer.phone.label')"
+                        :subtitle="useTrans('footer.open_hours.time')"
+                    >
+                        <template #content>
+                            <p>{{ useTrans('footer.phone.number') }}</p>
+                        </template>
+                    </ContactSection>
                 </div>
             </div>
         </AppContainer>

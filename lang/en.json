@@ -114,8 +114,15 @@
     },
     "footer": {
         "get_in_touch": "Get in touch with us",
-        "phone": "+36 1 790-1018",
-        "email": "info@mdy.hu",
+        "phone": {
+            "label": "Phone",
+            "number": "+36 1 790-1018"
+        },
+        "email": {
+            "label": "Email",
+            "subtitle": "Out friendly team is here to help",
+            "address": "info@mdy.hu"
+        },
         "copyright": "© biztositas-hitel.hu 2010 All right reserved.",
         "headquarters": {
             "label": "Headquarters",
@@ -123,6 +130,7 @@
         },
         "office": {
             "label": "Office",
+            "subtitle": "Come say hello to us",
             "address": "30/B., Kolostor street (Floor I), Budapest, 1037 Hungary"
         },
         "po_box": {

@@ -54,11 +54,11 @@ const titleClasses = 'font-semibold text-white mb-3';
 
                         <p class="mt-6 flex items-center gap-x-1">
                             <PhoneIcon class="size-4 text-white" />
-                            <span>{{ useTrans('footer.phone') }}</span>
+                            <span>{{ useTrans('footer.phone.number') }}</span>
                         </p>
                         <p class="flex items-center gap-x-1">
                             <EnvelopeIcon class="size-4 text-white" />
-                            <span>{{ useTrans('footer.email') }}</span>
+                            <span>{{ useTrans('footer.email.address') }}</span>
                         </p>
                     </div>
                 </div>

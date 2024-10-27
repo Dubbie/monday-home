@@ -114,8 +114,15 @@
     },
     "footer": {
         "get_in_touch": "Kapcsolatfelvétel",
-        "phone": "+36 1 790-1018",
-        "email": "info@mdy.hu",
+        "phone": {
+            "label": "Telefon",
+            "number": "+36 1 790-1018"
+        },
+        "email": {
+            "label": "Email",
+            "subtitle": "Csapatunk szívesen segít",
+            "address": "info@mdy.hu"
+        },
         "copyright": "© biztositas-hitel.hu 2010 Minden jog fenntarva.",
         "headquarters": {
             "label": "Székhely",
@@ -123,6 +130,7 @@
         },
         "office": {
             "label": "Iroda",
+            "subtitle": "Találkozzunk személyesen",
             "address": "1037 Budapest, Kolostor út 30/B. I. em."
         },
         "po_box": {
