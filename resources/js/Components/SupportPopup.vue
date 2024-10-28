@@ -32,7 +32,7 @@ onBeforeUnmount(() => {
             v-show="isAtTop"
             class="pointer-events-none fixed bottom-0 right-0 z-10"
         >
-            <img src="/img/eu.png" alt="" />
+            <img src="/img/eu.png" alt="" class="max-h-[33vh]" />
         </div>
     </Transition>
 </template>
