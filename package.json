@@ -29,6 +29,7 @@
     },
     "dependencies": {
         "@heroicons/vue": "^2.1.5",
+        "@vueuse/motion": "^2.2.6",
         "leaflet": "^1.9.4",
         "vue-i18n": "^10.0.4"
     }
