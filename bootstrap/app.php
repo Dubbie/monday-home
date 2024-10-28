@@ -29,5 +29,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'notice_read',
             'locale'
         ]);
+
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions) {})->create();
