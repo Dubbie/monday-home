@@ -1,6 +1,7 @@
 {
     "company_name": "Monday Insurance Brokers Kft.",
     "title": "Insurance and Loan",
+    "keywords": "Insurance, loan, Monday",
     "alert": {
         "title": "Stock Transfer!",
         "description": "Read more about the details of the stock transfer."
@@ -27,12 +28,14 @@
         "agricultural_insurance": "Agricultural Insurance"
     },
     "about_us": {
+        "description": "About our company.",
+        "keywords": "Background, Goal, Mission",
         "introduction": {
             "title": "Background",
             "description": "Founded in 2009 Monday became a steady actor of the Hungarian insurance intermediating market. The owners of Monday have several decades of experience in the banking, insurance and real estate sectors."
         },
         "mission": {
-            "title": "Mission",
+            "title": "Goal",
             "description": "Our aim is to develop a financial system where all client demands are answered in the same high quality standard that would satisfy the owners. Beside retail demands our network is at disposal of particular corporate needs."
         },
         "contribution": {

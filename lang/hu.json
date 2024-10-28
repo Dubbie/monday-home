@@ -1,6 +1,7 @@
 {
     "company_name": "Monday Insurance Brokers Kft.",
     "title": "Biztosítás és Hitel",
+    "keywords": "Biztosítás, hitel, Monday",
     "alert": {
         "title": "Állomány-átruházás!",
         "description": "Tekintse meg az állomány-átruházás részletes tájékoztatóját."
@@ -27,6 +28,8 @@
         "agricultural_insurance": "Mezőgazdasági Biztosítások"
     },
     "about_us": {
+        "description": "A Monday Kft. bemutatása.",
+        "keywords": "Hátterünk, Célunk, Fejlődés",
         "introduction": {
             "title": "Hátterünk",
             "description": "A 2009-ben alakult Monday mára a magyarországi biztosításközvetítői piac stabil szereplője. A Monday tulajdonosai évtizedes tapasztalattal rendelkeznek a banki, biztosítási és ingatlanbefektetési szakterületekről."
@@ -47,6 +50,8 @@
         "e_marketing": "E-Marketing Nyilatkozat"
     },
     "services": {
+        "description": "A Monday Kft. szolgáltatásai.",
+        "keywords": "Biztosítási Audit, Igényfelmérés, Versenyeztetés, Jogszabályi változások követése, Díjfizetés koordinálása, Napi ügyintézés, Értékelés, Változások követése, Új konstrukciók bemutatása, Évfordulós megújítás",
         "audit": {
             "title": "Biztosítási Audit",
             "headline": " Meglévő biztosítottsági állapot feltárása és előzményszerződések vizsgálata",

@@ -6,10 +6,15 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 
 const titleClasses = 'text-xl font-bold mb-2';
 const pClasses = 'text-zinc-500 text-justify';
+
+const meta = {
+    description: useTrans('about_us.description'),
+    keywords: useTrans('about_us.keywords'),
+};
 </script>
 
 <template>
-    <AppLayout :title="useTrans('header.about_us')">
+    <AppLayout :title="useTrans('header.about_us')" :meta-data="meta">
         <AppContainer>
             <!-- Carousel here -->
             <MondayCarousel class="mb-8" />

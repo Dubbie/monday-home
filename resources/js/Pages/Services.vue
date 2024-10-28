@@ -110,10 +110,15 @@ const services = {
         },
     ],
 };
+
+const meta = {
+    description: useTrans('services.description'),
+    keywords: useTrans('services.keywords'),
+};
 </script>
 
 <template>
-    <AppLayout :title="useTrans('header.services')">
+    <AppLayout :title="useTrans('header.services')" :meta-data="meta">
         <AppContainer>
             <div class="grid gap-y-6 md:grid-cols-2 md:gap-x-8">
                 <div

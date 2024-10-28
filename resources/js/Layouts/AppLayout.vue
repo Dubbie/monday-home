@@ -12,6 +12,7 @@ import { useTrans } from '@/composables/trans';
 
 const props = defineProps({
     title: String,
+    metaData: Object,
     hideAlert: {
         type: Boolean,
         default: false,
@@ -30,7 +31,20 @@ const fullTitle = computed(() => {
 </script>
 
 <template>
-    <Head :title="fullTitle" />
+    <Head>
+        <title>{{ fullTitle }}</title>
+
+        <meta
+            v-if="metaData?.description"
+            name="description"
+            :content="metaData?.description"
+        />
+        <meta
+            v-if="metaData?.keywords"
+            name="keywords"
+            :content="metaData?.keywords"
+        />
+    </Head>
 
     <StockTransferBanner v-if="!hideAlert" />
     <LocaleSwitcher />

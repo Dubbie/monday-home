@@ -15,6 +15,7 @@ export default {
         extend: {
             colors: {
                 monday: '#3baa34',
+                'monday-accessible': 'rgb(30, 128, 24)',
             },
             fontFamily: {
                 sans: ['Open Sans', ...defaultTheme.fontFamily.sans],

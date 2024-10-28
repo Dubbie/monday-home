@@ -43,7 +43,7 @@ const classMap = {
     primary: {
         default: 'bg-zinc-800 text-white font-semibold hover:bg-zinc-900',
         blue: 'bg-blue-500 text-white font-semibold hover:bg-blue-400',
-        green: 'bg-monday text-white font-semibold hover:bg-green-500',
+        green: 'bg-monday text-white font-semibold hover:bg-green-700',
         white: 'bg-white text-zinc-800 font-semibold hover:bg-zinc-100',
     },
     primaryInverse: {

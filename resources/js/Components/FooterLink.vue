@@ -11,12 +11,15 @@ defineProps({
     icon: {
         type: Function,
         required: true,
-    }
-})
+    },
+});
 </script>
 
 <template>
-    <a :href="href" class="flex gap-x-1 items-center text-white/70 hover:text-white">
+    <a
+        :href="href"
+        class="flex items-center gap-x-1 text-white hover:underline"
+    >
         <component :is="icon" class="size-4 text-white" />
         <span>{{ label }}</span>
     </a>
