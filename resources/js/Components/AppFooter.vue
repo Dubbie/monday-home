@@ -68,7 +68,7 @@ const titleClasses = 'font-semibold text-white mb-3';
                         {{ useTrans('footer.regulations.title') }}
                     </h3>
 
-                    <div class="text-sm">
+                    <div class="space-y-1 text-sm">
                         <FooterLink
                             :icon="CheckIcon"
                             :label="useTrans('footer.regulations.services')"
@@ -106,7 +106,7 @@ const titleClasses = 'font-semibold text-white mb-3';
                         {{ useTrans('footer.links.title') }}
                     </h3>
 
-                    <div class="text-sm">
+                    <div class="space-y-1 text-sm">
                         <FooterLink
                             :icon="LockClosedIcon"
                             :label="useTrans('footer.links.partners')"

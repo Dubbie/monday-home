@@ -19,7 +19,7 @@ const currentLocale = computed(() => {
                     v-for="locale in locales"
                     class="cursor-pointer p-2 text-xs font-bold uppercase hover:bg-black/5"
                     :class="{
-                        'text-monday': currentLocale === locale,
+                        'text-monday-accessible': currentLocale === locale,
                     }"
                     :key="locale"
                     :href="route('locale.set', locale)"
