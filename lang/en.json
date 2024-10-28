@@ -41,6 +41,7 @@
         }
     },
     "contract": {
+        "documents": "Documents",
         "tos": "Terms and Conditions (PDF)",
         "privacy_policy": "Privacy Policy",
         "e_marketing": "Consent Declaration for E-Marketing"

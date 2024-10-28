@@ -41,6 +41,7 @@
         }
     },
     "contract": {
+        "documents": "Dokumentumok",
         "tos": "Általános Szerződési Feltételek (PDF)",
         "privacy_policy": "Adatvédelmi Szabályzat",
         "e_marketing": "E-Marketing Nyilatkozat"

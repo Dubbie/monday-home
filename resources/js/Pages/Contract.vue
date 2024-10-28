@@ -9,31 +9,34 @@ import { useTrans } from '@/composables/trans.js';
 <template>
     <AppLayout :title="useTrans('header.appointment')">
         <AppContainer>
-            <div class="grid grid-cols-12">
-                <div class="col-span-9">
-                    <iframe
-                        src="https://igenyfelmero.rendelesem.hu/index.php?page=megbiz&template_override=coreui_full_standalone#?page=megbiz"
-                        class="h-[1100px] w-full"
-                        frameborder="0"
-                    />
-                </div>
+            <p class="mb-2 font-semibold">
+                {{ useTrans('contract.documents') }}
+            </p>
+            <div
+                class="flex flex-col gap-y-2 lg:flex-row lg:gap-x-2 lg:gap-y-0"
+            >
+                <AppButton size="sm">
+                    <ArrowDownTrayIcon class="size-4 shrink-0" />
+                    <span>{{ useTrans('contract.tos') }}</span>
+                </AppButton>
 
-                <div class="col-span-3 space-y-2">
-                    <AppButton size="sm" class="w-full">
-                        <ArrowDownTrayIcon class="size-4 shrink-0" />
-                        <span>{{ useTrans('contract.tos') }}</span>
-                    </AppButton>
+                <AppButton size="sm">
+                    <ArrowDownTrayIcon class="size-4 shrink-0" />
+                    <span>{{ useTrans('contract.privacy_policy') }}</span>
+                </AppButton>
 
-                    <AppButton size="sm" class="w-full">
-                        <ArrowDownTrayIcon class="size-4 shrink-0" />
-                        <span>{{ useTrans('contract.privacy_policy') }}</span>
-                    </AppButton>
+                <AppButton size="sm">
+                    <ArrowDownTrayIcon class="size-4 shrink-0" />
+                    <span>{{ useTrans('contract.e_marketing') }}</span>
+                </AppButton>
+            </div>
 
-                    <AppButton size="sm" class="w-full">
-                        <ArrowDownTrayIcon class="size-4 shrink-0" />
-                        <span>{{ useTrans('contract.e_marketing') }}</span>
-                    </AppButton>
-                </div>
+            <div class="mt-3">
+                <iframe
+                    src="https://igenyfelmero.rendelesem.hu/index.php?page=megbiz&template_override=coreui_full_standalone#?page=megbiz"
+                    class="h-[1100px] w-full"
+                    frameborder="0"
+                />
             </div>
         </AppContainer>
     </AppLayout>
