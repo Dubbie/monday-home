@@ -125,6 +125,10 @@ const meta = {
                     v-for="key in Object.keys(services)"
                     :key="key"
                     class="space-y-4"
+                    v-motion
+                    :initial="{ opacity: 0, y: 10 }"
+                    :enter="{ opacity: 1, y: 0 }"
+                    :delay="key === 'left' ? 0 : 100"
                 >
                     <template
                         v-for="service in services[key]"
@@ -169,26 +173,33 @@ const meta = {
                             </div>
                         </AppCollapse>
                     </template>
-                </div>
 
-                <!-- Links -->
-                <div>
-                    <a href="/monday-szolgaltatasi-szabalyzat.pdf">
-                        <AppButton>
-                            <ArrowDownTrayIcon class="size-4" />
-                            <span>{{
-                                useTrans('services.pdf_hungarian')
-                            }}</span>
-                        </AppButton>
-                    </a>
-                </div>
-                <div>
-                    <a href="/monday-szolgaltatasi-szabalyzat-eng.pdf">
-                        <AppButton>
-                            <ArrowDownTrayIcon class="size-4" />
-                            <span>{{ useTrans('services.pdf_english') }}</span>
-                        </AppButton>
-                    </a>
+                    <template v-if="key === 'left'">
+                        <a
+                            href="/monday-szolgaltatasi-szabalyzat.pdf"
+                            class="mt-3 block"
+                        >
+                            <AppButton>
+                                <ArrowDownTrayIcon class="size-4" />
+                                <span>{{
+                                    useTrans('services.pdf_hungarian')
+                                }}</span>
+                            </AppButton>
+                        </a>
+                    </template>
+                    <template v-else>
+                        <a
+                            href="/monday-szolgaltatasi-szabalyzat-eng.pdf"
+                            class="mt-3 block"
+                        >
+                            <AppButton>
+                                <ArrowDownTrayIcon class="size-4" />
+                                <span>{{
+                                    useTrans('services.pdf_english')
+                                }}</span>
+                            </AppButton>
+                        </a>
+                    </template>
                 </div>
             </div>
         </AppContainer>

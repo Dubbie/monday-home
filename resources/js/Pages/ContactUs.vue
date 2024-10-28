@@ -61,6 +61,9 @@ onMounted(() => {
                         :icon="EnvelopeIcon"
                         :title="useTrans('footer.email.label')"
                         :subtitle="useTrans('footer.email.subtitle')"
+                        v-motion
+                        :initial="{ opacity: 0, y: 10 }"
+                        :enter="{ opacity: 1, y: 0 }"
                     >
                         <template #content>
                             <a
@@ -75,6 +78,10 @@ onMounted(() => {
                         :icon="MapPinIcon"
                         :title="useTrans('footer.office.label')"
                         :subtitle="useTrans('footer.office.subtitle')"
+                        v-motion
+                        :initial="{ opacity: 0, y: 10 }"
+                        :enter="{ opacity: 1, y: 0 }"
+                        :delay="100"
                     >
                         <template #content>
                             <p>{{ useTrans('footer.office.address') }}</p>
@@ -86,6 +93,10 @@ onMounted(() => {
                         :icon="PhoneIcon"
                         :title="useTrans('footer.phone.label')"
                         :subtitle="useTrans('footer.open_hours.time')"
+                        v-motion
+                        :initial="{ opacity: 0, y: 10 }"
+                        :enter="{ opacity: 1, y: 0 }"
+                        :delay="200"
                     >
                         <template #content>
                             <p>{{ useTrans('footer.phone.number') }}</p>
