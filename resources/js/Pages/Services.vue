@@ -173,16 +173,22 @@ const meta = {
 
                 <!-- Links -->
                 <div>
-                    <AppButton>
-                        <ArrowDownTrayIcon class="size-4" />
-                        <span>{{ useTrans('services.pdf_hungarian') }}</span>
-                    </AppButton>
+                    <a href="/monday-szolgaltatasi-szabalyzat.pdf">
+                        <AppButton>
+                            <ArrowDownTrayIcon class="size-4" />
+                            <span>{{
+                                useTrans('services.pdf_hungarian')
+                            }}</span>
+                        </AppButton>
+                    </a>
                 </div>
                 <div>
-                    <AppButton>
-                        <ArrowDownTrayIcon class="size-4" />
-                        <span>{{ useTrans('services.pdf_english') }}</span>
-                    </AppButton>
+                    <a href="/monday-szolgaltatasi-szabalyzat-eng.pdf">
+                        <AppButton>
+                            <ArrowDownTrayIcon class="size-4" />
+                            <span>{{ useTrans('services.pdf_english') }}</span>
+                        </AppButton>
+                    </a>
                 </div>
             </div>
         </AppContainer>
