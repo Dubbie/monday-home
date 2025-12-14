@@ -4,6 +4,11 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
 
+collect(config('legacy_urls', []))
+    ->each(function ($target, $legacy) {
+        Route::permanentRedirect($legacy, $target);
+    });
+
 Route::get('/', [PageController::class, 'aboutUs'])->name('about-us');
 Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/contact', [PageController::class, 'contact'])->name('contact-us');
