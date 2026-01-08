@@ -4,6 +4,7 @@ namespace App\Services;
 
 use App\Mail\NewQuote;
 use Exception;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Lang;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
@@ -92,7 +93,13 @@ class QuoteService
      */
     public static function translateAttributeKey(string $key)
     {
-        return Lang::get("validation.attributes.$key", [], 'hu') ?: $key;
+        $translationKey = "validation.attributes.$key";
+
+        if (Lang::has($translationKey, [], 'hu')) {
+            return Lang::get($translationKey, [], 'hu');
+        }
+
+        return $key;
     }
 
     /**
@@ -122,11 +129,23 @@ class QuoteService
      */
     private static function logQuoteSubmission(string $insuranceType, array $quoteData)
     {
-        Log::info('Új ajánlatkérés:');
-        Log::info(' - Tipus: ' . $insuranceType);
-        Log::info(' - Adatok:');
-        foreach ($quoteData as $key => $value) {
-            Log::info(sprintf(' ---- %s: %s', $key, $value));
+        $logFile = storage_path('logs/quotes.log');
+        $directory = dirname($logFile);
+
+        if (! File::exists($directory)) {
+            File::makeDirectory($directory, 0755, true);
         }
+
+        $lines = [
+            sprintf('[%s] Új ajánlatkérés:', now()->format('Y-m-d H:i:s')),
+            ' - Tipus: ' . $insuranceType,
+            ' - Adatok:',
+        ];
+
+        foreach ($quoteData as $key => $value) {
+            $lines[] = sprintf(' ---- %s: %s', $key, $value);
+        }
+
+        File::append($logFile, implode(PHP_EOL, $lines) . PHP_EOL);
     }
 }

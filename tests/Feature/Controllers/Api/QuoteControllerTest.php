@@ -3,12 +3,19 @@
 namespace Tests\Feature\Controllers\Api;
 
 use App\Services\QuoteService;
-use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
 class QuoteControllerTest extends TestCase
 {
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        Mail::fake();
+    }
+
     public function test_send_company_insurance_quote(): void
     {
         $data = [
@@ -158,5 +165,38 @@ class QuoteControllerTest extends TestCase
             'message' => 'Quote sent successfully',
             'success' => true
         ]);
+    }
+
+    public function test_quote_submission_is_logged(): void
+    {
+        $logFile = storage_path('logs/quotes.log');
+        if (File::exists($logFile)) {
+            File::delete($logFile);
+        }
+
+        $data = [
+            'company_name' => 'Company Name',
+            'email' => 'test@example.com',
+            'phone' => '06301231234',
+            'professional_activity' => 'Professional Activity',
+            'message' => 'This is a message.'
+        ];
+
+        $response = $this->postJson(route('api.quote.company'), $data);
+
+        $response->assertStatus(200)->assertJson([
+            'message' => 'Quote sent successfully',
+            'success' => true,
+        ]);
+
+        $this->assertFileExists($logFile);
+
+        $contents = File::get($logFile);
+        $this->assertStringContainsString('Új ajánlatkérés:', $contents);
+        $this->assertStringContainsString(' - Tipus: Szakmai Felelősségbiztosítás', $contents);
+
+        foreach (QuoteService::formatDataToHumanReadable($data) as $key => $value) {
+            $this->assertStringContainsString(sprintf(' ---- %s: %s', $key, $value), $contents);
+        }
     }
 }
