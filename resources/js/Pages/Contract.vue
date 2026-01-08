@@ -33,7 +33,7 @@ import { useTrans } from '@/composables/trans.js';
 
             <div class="mt-3">
                 <iframe
-                    src="https://igenyfelmero.rendelesem.hu/index.php?page=megbiz&template_override=coreui_full_standalone#?page=megbiz"
+                    src="https://igenyfelmero.sundayit.hu/index.php?page=megbiz&template_override=coreui_full_standalone#?page=megbiz"
                     class="h-[1100px] w-full"
                     frameborder="0"
                 />
